@@ -1,4 +1,4 @@
-setwd("/users/cwillis/Dropbox/Dissertation/ECIR/analysis")
+setwd("/users/cwillis/dev/uiucGSLIS/ecir-2016/analysis")
 cost <- function(r, pi = 0) mean(abs(r-pi) > 0.5)
 
 # Dakka et al, TREC 6-8 (301-450), LATimes
