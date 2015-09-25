@@ -1,0 +1,113 @@
+\begin{thebibliography}{10}
+
+\bibitem{Amodeo2011}
+G.~Amodeo, G.~Amati, and G.~Gambosi.
+\newblock {On relevance, time and query expansion}.
+\newblock {\em Proceedings of the 20th ACM international conference on
+  Information and knowledge management - CIKM '11}, page 1973, 2011.
+
+\bibitem{Barry1998}
+C.~Barry and L.~Schamber.
+\newblock {Users' criteria for relevance evaluation: A cross-situational
+  comparison}.
+\newblock {\em Information Processing \& Management}, 34(2):219--236, 1998.
+
+\bibitem{Berberich2010}
+K.~Berberich, S.~Bedathur, O.~Alonso, and G.~Weikum.
+\newblock {A Language Modeling Approach for Temporal Information Needs}.
+\newblock In {\em Proceedings of the 32Nd European Conference on Advances in
+  Information Retrieval}, pages 13--25, 2010.
+
+\bibitem{Berberich2005}
+K.~Berberich, M.~Vazirgiannis, and G.~Weikum.
+\newblock {Time-Aware Authority Ranking}.
+\newblock {\em Internet Mathematics}, 2(3):301--332, Jan. 2005.
+
+\bibitem{Dai}
+N.~Dai and B.~D. Davison.
+\newblock {Freshness Matters : In Flowers , Food , and Web Authority}.
+\newblock pages 114--121.
+
+\bibitem{Dakka2012}
+W.~Dakka, L.~Gravano, and P.~Ipeirotis.
+\newblock {Answering General Time-Sensitive Queries}.
+\newblock {\em IEEE Transactions on Knowledge and Data Engineering},
+  24(2):220--235, Feb. 2012.
+
+\bibitem{Efron2011}
+M.~Efron and G.~Golovchinsky.
+\newblock {Estimation methods for ranking recent information}.
+\newblock {\em Proceedings of the 34th international ACM SIGIR conference on
+  Research and development in Information - SIGIR '11}, page 495, 2011.
+
+\bibitem{Efron2014}
+M.~Efron, J.~Lin, J.~He, and A.~D. Vries.
+\newblock {Temporal Feedback for Tweet Search with Non-Parametric Density
+  Estimation}.
+\newblock {\em umiacs.umd.edu}, pages 33--42, 2014.
+
+\bibitem{Jones2007}
+R.~Jones and F.~Diaz.
+\newblock {Temporal profiles of queries}, July 2007.
+
+\bibitem{Kanhabua2011}
+N.~Kanhabua and K.~N\o~rv\aa g.
+\newblock {A comparison of time-aware ranking methods}.
+\newblock {\em Proceedings of the 34th international ACM SIGIR conference on
+  Research and development in Information - SIGIR '11}, page 1257, 2011.
+
+\bibitem{Kulkarni2011}
+A.~Kulkarni, J.~Teevan, K.~M. Svore, and S.~T. Dumais.
+\newblock {Understanding temporal query dynamics}.
+\newblock {\em Proceedings of the fourth ACM international conference on Web
+  search and data mining - WSDM '11}, page 167, 2011.
+
+\bibitem{Lavrenko2000}
+V.~Lavrenko, M.~Schmill, and D.~Lawrie.
+\newblock {Mining of concurrent text and time series}.
+\newblock {\em \ldots on Text Mining}, pages 2--9, 2000.
+
+\bibitem{Li2003}
+X.~Li and W.~B. Croft.
+\newblock {Time-based language models}.
+\newblock {\em Proceedings of the twelfth international conference on
+  Information and knowledge management - CIKM '03}, page 469, 2003.
+
+\bibitem{Metzler2009}
+D.~Metzler, R.~Jones, F.~Peng, and R.~Zhang.
+\newblock {Improving search relevance for implicitly temporal queries}.
+\newblock {\em Proceedings of the 32nd international ACM SIGIR conference on
+  Research and development in information retrieval - SIGIR '09}, (1):700,
+  2009.
+
+\bibitem{Mizzaro1997}
+S.~Mizzaro.
+\newblock {Relevance: The whole history}.
+\newblock {\em Journal of the American Society for Information Science},
+  48(9):810--832, 1997.
+
+\bibitem{Parikh2008}
+N.~Parikh and N.~Sundaresan.
+\newblock {Scalable and near real-time burst detection from eCommerce queries}.
+\newblock {\em Proceeding of the 14th ACM SIGKDD international conference on
+  Knowledge discovery and data mining - KDD 08}, page 972, 2008.
+
+\bibitem{Peetz2013}
+M.~Peetz and M.~D. Rijke.
+\newblock {Cognitive temporal document priors}.
+\newblock {\em Advances in Information Retrieval}, 2013.
+
+\bibitem{Shokouhi2011}
+M.~Shokouhi.
+\newblock {Detecting Seasonal Queries by Time-Series Analysis Categories and
+  Subject Descriptors}.
+\newblock In {\em SIGIR 11}, pages 1171--1172, 2011.
+
+\bibitem{Vlachos2004}
+M.~Vlachos, C.~Meek, Z.~Vagena, and D.~Gunopulos.
+\newblock {Identifying similarities, periodicities and bursts for online search
+  queries}.
+\newblock {\em Proceedings of the 2004 ACM SIGMOD international conference on
+  Management of data - SIGMOD '04}, page 131, 2004.
+
+\end{thebibliography}
