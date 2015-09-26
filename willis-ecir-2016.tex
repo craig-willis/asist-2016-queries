@@ -227,122 +227,39 @@ IndirectEventReference & 0.19  \\ \hline
 
 \subsection{Regression analysis}
 
-In this section, were report the results of the regression analysis, predicting the manually assigned categories for each collection.
+In this section, were report the results of a logistic regression analysis, predicting the manually assigned categories for each test collection. The resulting models are reported in Table \ref{table.regresults}. 
+
+\begin{table*}
+\small
+\begin{tabular}{| l | l | l | l | l |} \hline
+\bf{Name} & \bf{Model} & \bf{AIC} & \bf{Pred. Error} & \bf{$R^2$} \\ \hline
+Novelty 	&  -3.767 + 5.848*SpecEvt + 2.523*OtherEnt & 52 & 0.070 & 0.669 \\ \hline
+Novelty (ACF/DPS)		&  -3.539 + 7.006*SpecEvt + 2.530*OtherEnt - 7.343*ACF & 49 & 0.070 & 0.706 \\ \hline
+Dakka	&  0.134 + 0.878*PlaceEnt  & 205 & 0.427 & 0.020 \\ \hline
+Dakka (ACF/DPS) 		& -0.917 + 0.393*DPS 	& 155 & 0.233 & 0.263  \\ \hline
+Efron	& -1.765 + 2.353*PlaceEnt + 1.410*OtherEnt & 150 &0.207& 0.181 \\ \hline
+Efron (ACF/DPS) 		& -2.727 + 1.965*PlaceEnt + 1.787*OtherEnt  + 0.163*DPS & 118 & 0.160 & 0.377 \\ \hline
+Peetz & -0.336 + 1.682*SpecEvt + 0.982*PerEvt + 0.672*PerEnt -0.6175*OrgEnt & 192 & 0.327 & 0.127 \\ \hline
+Peetz (ACF/DPS) 		& -1.245 + 1.218*SpecEvt + 0.797*PerEvt + 2.835*ACF + 0.002*DPS & 171 & 0.313 & 0.223 \\ \hline
+\end{tabular}
+\label{table.regresults}
+\caption{Logistic regression models for each test collection with and without ACF/DPS variables.  Model fit reported based on AIC, cross-validation prediction error, and pseudo-$R^2$.}
+\end{table*}
 
 \subsubsection{Novelty}
-We begin with the 2003-2004 Novelty topics. In this case, the response variable is the manually assigned ``opinion'' (0) or ``event'' (1) categories.  Regression analysis is performed with and without the relevant document distribution information.
 
-Without ACF/DPS:
-\begin{verbatim}
-              Estimate Std. Error  Pr(>|z|)    
-(Intercept)     -3.854      1.036  0.000199 ***
-ExplicitDate     2.170      1.211  0.073268 .  
-OtherEntity      2.097      1.360  0.123093    
-SpecificEvent    5.290      1.115  2.1e-06 ***
-
-AIC 49.287
-CV prediction error 0.070
-\end{verbatim}
-
-With ACF/DPS:
-\begin{verbatim}
-              Estimate Std. Error Pr(>|z|)    
-(Intercept)     -3.747      1.086  0.000557 ***
-ExplicitDate     2.326      1.202  0.052889 .  
-OtherEntity      2.278      1.297  0.079082 .  
-SpecificEvent    6.606      1.444  4.78e-06 ***
-ACF             -8.113      3.804  0.032918 *  
-
-AIC: 45.708
-CV prediction error 0.080
-\end{verbatim}
-
-In both cases, we see that the SpecificEvent code is a useful predictor of the ``event'' category (p < 0.01). This is unsurprising, since the SpecificEvent code encompasses the event category definition.
-
-\subsubsection{Efron and Golovchinsky}
-
-In the next study, we look at Efron and Golovchinsky's classification of recency queries in topics 301-450.  ACF and DPS values are calculated based on the Financial Times collection. 
-
-Without ACF/DPS:
-\begin{verbatim}
-                  Estimate Std. Error Pr(>|z|)    
-(Intercept)        -1.8372     0.2806  5.88e-11 ***
-OrganizationEntity  2.0011     1.3462  0.1371    
-OtherEntity         1.5807     0.6609  0.0168 *  
-PlaceEntity         2.2546     0.4861  3.52e-06 ***
-IndirectEventRef    1.6820     1.2703  0.1855    
-PeriodicEvent     -17.5539  1542.5833  0.9909    
-
-AIC: 149.45
-CV prediction error: 0.213
-\end{verbatim}
-
-With ACF/DPS:
-\begin{verbatim}
-                         Estimate Std. Error Pr(>|z|)    
-(Intercept)        -3.01773    0.45589  3.61e-11 ***
-OrganizationEntity  2.74178    1.71794  0.110496    
-OtherEntity         2.21050    0.76411  0.003817 ** 
-PlaceEntity         2.15790    0.63735  0.000710 ***
-IndirectEventRef    3.19011    1.64329  0.052222 .  
-PeriodicEvent     -20.44363 1438.13865  0.988658    
-SpecificEvent      -2.80536    1.87915  0.135467    
-DPS                 0.19832    0.05409  0.000246 ***
-
-AIC: 115.05
-CV prediction error 0.167
-\end{verbatim}
+We begin with the 2003-2004 Novelty topics. In this case, the response variable is the manually assigned ``opinion'' (0) or ``event'' (1) categories.  Following Jones and Dias \cite{Jones2007}, we adopt ``event'' as the temporal category. Logistic regression analysis is performed with and without the ACF and DPS variables.  Looking at Table \ref{table.regresults}, SpecificEvent is a useful predictor of the ``event'' category (p < 0.01). This is unsurprising, since the definition of the SpecificEvent code corresponds to the Novelty ``event'' category. Including ACF has a minimal effect. 
 
 \subsubsection{Dakka et al}
 
-Without ACF/DPS: Regression analysis indicates no features are useful predictors of manually assigned categories.
+Dakka et al provided manual classification of ``time-sensitive queries'' in TREC topics 301-450. As reported in Table \ref{table.regresults}, the DPS variable has a considerable effect in predicting the temporal category. No other variables are significant in this model.  This suggests that either 1) Dakka et al relied heavily on the distribution of relevant documents in determining the classification or 2) our model is missing an important explanatory component.
 
+\subsubsection{Efron and Golovchinsky}
 
-With ACF/DPS:
-\begin{verbatim}
-
-                Estimate Std. Error Pr(>|z|)    
-(Intercept)     -0.94500    0.26426  0.000349 ***
-SpecificEvent   16.68523 1516.27888  0.991220    
-DPS              0.37944    0.08651  1.15e-05 ***
-
-AIC: 153.04
-CV prediction error: 0.24
-\end{verbatim}
+Efron and Golovchinsky also classified topics 301-450, in this case identifying only ``recency'' queries.  As reported in Table \ref{table.regresults}, both the PlaceEntity and OtherEntity codes are useful predictors of the temporal category. Inclusion of the DPS variable substantially improves model fit. This suggests that the distribution of relevant documents played some role in the determination of topic classes.
 
 \subsubsection{Peetz et al}
-
-
-Without ACF/DPS:
-\begin{verbatim}
-                   Estimate Std. Error Pr(>|z|)  
-(Intercept)          -0.3958     0.2834  0.1625  
-ExplicitDate         16.2401  1083.7318   0.9880  
-OrganizationEntity   -0.6614     0.3929  0.0923 .
-PersonEntity          0.6829     0.4355   0.1169  
-GenericEvent         16.6400  1665.1334   0.9920  
-PeriodicEvent         1.0686     0.5139   0.0376 *
-SpecificEvent         1.5576     0.6818   0.0223 *
-
-AIC: 189.07
-CV prediction error: 0.313
-\end{verbatim}
-
-With ACF/DPS:
-\begin{verbatim}
-                Estimate Std. Error Pr(>|z|)    
-(Intercept)   -1.296e+00  3.185e-01  4.72e-05 ***
-ExplicitDate   1.581e+01  1.161e+03   0.9891    
-GenericEvent   1.648e+01  1.542e+03   0.9915    
-PeriodicEvent  8.655e-01  5.441e-01   0.1117    
-SpecificEvent  1.193e+00  7.589e-01   0.1161    
-ACF            2.758e+00  1.441e+00   0.0556 .  
-DPS            2.168e-03  1.216e-03   0.0745 . 
-
-AIC: 170.72
-CV prediction error: 0.30
-\end{verbatim}
-
+Finally, we look at Peetz et al's classification of the Blog06-08 topics 850-1050.  In this case, the SpecificEvent and PeriodicEvent code are useful predictors of the temporal category. Including the ACF and DPS variables improves model fit, again suggesting that the distribution of relevant documents played a role in manual classification.
 
 \subsection{Predicting when to use temporal retrieval models}
 
@@ -353,19 +270,6 @@ Instead of testing these retrieval models in conventional evaluation, we instead
 The content analysis relies on a manual review and interpretation of the topic text with some investigation of related contexts. The original manual classifications relied on a combination of manual interpretation of topic text and interpretation or heuristic classification based on the distribution of true-relevant documents. The retrieval models rely on the distribution of pseudo-relevant documents.  As a final measure, we adopt the cross-correlation function (CCF) used by Amodeo et al \cite{Amodeo2011} to measure the correlation of the true-relevant and pseudo-relevant document distributions. 
 
 The final analysis will include a regression analysis of the above features including the qualitative codes, previously assigned classifications, automatic classification based on retrieval performance and the CCF.
-
-\begin{table*}
-\small
-\begin{tabular}{| l | l | l | l | l | l | l | l | l | l | l | l |} \hline
-\bf{Collection} & \bf{Topics}   & \bf{Future} & \bf{Recent} & \bf{Opinion} & \bf{Specific} & \bf{Periodic} & \bf{Type} & \bf{Explicit} & \bf{Implicit} & \bf{NE} & \bf{Total} \\ \hline
-Ad-hoc & 51-200, 251-450 & 5 & 16 & 8 & 20 & 3 & 129 & 10 & 2 & 121 & 350 \\ \hline
-Novelty & 1-100 & 0 & 0 & 38 & 55 & 4 & 14 & 27 & 3 & 76 & 100\\ \hline
-Blog06 & 851-950 & 1 & 1 & 100 & 14 & 21 & 6 & 2 & 0 & 86 & 100 \\ \hline
-Microblog & 1-225 & 1 & 0 & 0 & 111 & 26 & 23 & 3 & 1 & 165 & 225 \\ \hline
-\end{tabular}
-\caption{Results}
-\label{table.results}
-\end{table*}
 
 
 \section{Conclusions}
