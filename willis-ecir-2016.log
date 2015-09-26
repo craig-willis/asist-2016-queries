@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.6.22)  26 SEP 2015 11:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.6.22)  26 SEP 2015 12:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -304,67 +304,55 @@ File: images/301.png Graphic file (type png)
  <use images/301.png>
 Package pdftex.def Info: images/301.png used on input line 53.
 (pdftex.def)             Requested size: 227.62204pt x 200.91771pt.
-
+ [2 <./images/301.png>]
 Overfull \hbox (6.44202pt too wide) in paragraph at lines 67--68
 \T1/aer/m/n/9 news col-lec-tions where the cen-tral con-cept of a ``time-sensit
 ive''
  []
 
-[2 <./images/301.png>]
-Overfull \hbox (7.33963pt too wide) in paragraph at lines 100--100
+
+Overfull \hbox (7.33963pt too wide) in paragraph at lines 96--96
 []\secfnt WHAT MAKES A QUERY TEM-PO-RALLY
  []
 
 [3]
 
 LaTeX Warning: Citation `Krippendorf1980' on page \thepage  undefined on input 
-line 139.
+line 121.
 
-[4]
-Overfull \hbox (4.45323pt too wide) in paragraph at lines 170--171
+
+Overfull \hbox (4.45323pt too wide) in paragraph at lines 152--153
 []\T1/aer/m/n/9 Jones and Diaz [9] use the first-order au-to-cor-re-la-tion (AC
 F)
  []
 
 
-LaTeX Warning: Citation `He2007' on page \thepage  undefined on input line 172.
+LaTeX Warning: Citation `He2007' on page \thepage  undefined on input line 154.
 
 
 
-LaTeX Warning: Citation `XXX' on page \thepage  undefined on input line 181.
+LaTeX Warning: Citation `XXX' on page \thepage  undefined on input line 163.
 
-
-Overfull \hbox (8.46692pt too wide) in paragraph at lines 189--190
+[4]
+Overfull \hbox (8.46692pt too wide) in paragraph at lines 171--172
 []\T1/aer/m/n/9 Our qual-i-ta-tive anal-y-sis sug-gests three broad classes: ev
 ents,
  []
 
-[5]
-Overfull \hbox (5.10152pt too wide) in paragraph at lines 259--260
+
+Overfull \hbox (5.10152pt too wide) in paragraph at lines 241--242
 []\T1/aer/m/n/9 Dakka et al pro-vided man-ual clas-si-fi-ca-tion of ``time-sens
 itive
  []
 
 
-LaTeX Warning: Citation `XXX' on page \thepage  undefined on input line 270.
+LaTeX Warning: Citation `XXX' on page \thepage  undefined on input line 252.
 
-(./willis-ecir-2016.bbl [6])
-Underfull \hbox (badness 1168) in paragraph at lines 311--311
-[]\T1/aer/m/n/8 science and dis-cov-ery
- []
+[5] (./willis-ecir-2016.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 315--315
-[]\T1/aer/m/n/8 political and diplo-
- []
-
-
-Underfull \hbox (badness 3333) in paragraph at lines 316--316
-[]\T1/aer/m/n/8 celebrity and hu-man
- []
-
-
-Overfull \hbox (13.10486pt too wide) in paragraph at lines 326--339
+ [6])
+Overfull \hbox (13.10486pt too wide) in paragraph at lines 282--295
 [][] 
  []
 
@@ -372,13 +360,13 @@ Overfull \hbox (13.10486pt too wide) in paragraph at lines 326--339
 
 ] [8] (./willis-ecir-2016.aux) ) 
 Here is how much of TeX's memory you used:
- 2841 strings out of 494522
- 36401 string characters out of 6167205
- 108785 words of memory out of 5000000
- 6015 multiletter control sequences out of 15000+600000
+ 2840 strings out of 494522
+ 36390 string characters out of 6167205
+ 108777 words of memory out of 5000000
+ 6014 multiletter control sequences out of 15000+600000
  57456 words of font info for 84 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 41i,9n,28p,1651b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,9n,28p,1644b,240s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014basic/texmf-dist/fonts/
 enc/dvips/base/8r.enc}</usr/local/texlive/2014basic/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/p
@@ -393,7 +381,7 @@ dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014basic/texmf-di
 st/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014basic/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on willis-ecir-2016.pdf (8 pages, 242417 bytes).
+Output written on willis-ecir-2016.pdf (8 pages, 236486 bytes).
 PDF statistics:
  83 PDF objects out of 1000 (max. 8388607)
  58 compressed objects within 1 object stream
