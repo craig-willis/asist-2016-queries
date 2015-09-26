@@ -228,6 +228,20 @@ Peetz (ACF/DPS) 		& -1.245 + 1.218*SpecEvt + 0.797*PerEvt + 2.835*ACF + 0.002*DP
 \caption{Logistic regression models for each test collection with and without ACF/DPS variables. Model fit reported based on AIC, cross-validation prediction error, and pseudo-$R^2$.}
 \end{table*}
 
+\begin{table*}
+\small
+\begin{tabular}{| l | l | l | l | l |} \hline
+\bf{Collection} 	& \bf{Model} & \bf{AIC} & \bf{Pred. Error} & \bf{$R^2$} \\ \hline
+Tweets 2011-12	& 0.722 - 2.332*GenEvt$^\uparrow$  & 141 & 0.318 & 0.043  \\ \hline
+Novelty 2003-4 		& -2.658 + 0.920*PlaceEntity$^\uparrow$  + 1.183*SpecificEvent$^\uparrow$  + 2.677*ACF$^\uparrow$  & 130 & 0.38 & 0.10 \\ \hline
+AP 			& -0.767 + 0.040*DPS$^\uparrow$  & 204 & 0.43 & 0.04 \\ \hline
+Blog06		& -1.047 + 0.848*PeriodicEvent + 0.017*DPS$^{\uparrow\uparrow}$ & 195 & 0.35 & 0.065 \\ \hline
+LATimes 		& 0.689 + 3.431*ExplicitDate - 0.711*PlaceEntity - 0.116*DPS$^\uparrow$ & 199 & 0.41 & 0.054 \\ \hline
+\end{tabular}
+\label{table.regresults}
+\caption{Logistic regression models predicting KL/KDE for each test collection. Model fit reported based on AIC, cross-validation prediction error, and pseudo-$R^2$. $^\uparrow$ indicates p < 0.05. $^{\uparrow\uparrow}$ indicates p < 0.01}
+\end{table*}
+
 \subsubsection{Novelty}
 
 We begin with the 2003-2004 Novelty topics. In this case, the response variable is the manually assigned ``opinion'' (0) or ``event'' (1) categories. Following Jones and Dias \cite{Jones2007}, we adopt ``event'' as the temporal category. Logistic regression analysis is performed with and without the ACF and DPS variables. Looking at Table \ref{table.regresults}, SpecificEvent is a useful predictor of the ``event'' category (p < 0.01). This is unsurprising, since the definition of the SpecificEvent code corresponds to the Novelty ``event'' category. Including ACF has a minimal effect. 
