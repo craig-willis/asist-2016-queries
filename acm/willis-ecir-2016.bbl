@@ -18,6 +18,16 @@ K.~Berberich, S.~Bedathur, O.~Alonso, and G.~Weikum.
 \newblock In {\em Proceedings of the 32Nd European Conference on Advances in
   Information Retrieval}, pages 13--25, 2010.
 
+\bibitem{Berberich2005}
+K.~Berberich, M.~Vazirgiannis, and G.~Weikum.
+\newblock {Time-Aware Authority Ranking}.
+\newblock {\em Internet Mathematics}, 2(3):301--332, Jan. 2005.
+
+\bibitem{Dai}
+N.~Dai and B.~D. Davison.
+\newblock {Freshness Matters : In Flowers , Food , and Web Authority}.
+\newblock pages 114--121.
+
 \bibitem{Dakka2012}
 W.~Dakka, L.~Gravano, and P.~Ipeirotis.
 \newblock {Answering General Time-Sensitive Queries}.
@@ -92,5 +102,12 @@ M.~Shokouhi.
 \newblock {Detecting Seasonal Queries by Time-Series Analysis Categories and
   Subject Descriptors}.
 \newblock In {\em SIGIR 11}, pages 1171--1172, 2011.
+
+\bibitem{Vlachos2004}
+M.~Vlachos, C.~Meek, Z.~Vagena, and D.~Gunopulos.
+\newblock {Identifying similarities, periodicities and bursts for online search
+  queries}.
+\newblock {\em Proceedings of the 2004 ACM SIGMOD international conference on
+  Management of data - SIGMOD '04}, page 131, 2004.
 
 \end{thebibliography}

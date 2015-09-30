@@ -1,92 +1,27 @@
-
-%%%%%%%%%%%%%%%%%%%%%%% file typeinst.tex %%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% This is the LaTeX source for the instructions to authors using
-% the LaTeX document class 'llncs.cls' for contributions to
-% the Lecture Notes in Computer Sciences series.
-% http://www.springer.com/lncs       Springer Heidelberg 2006/05/04
-%
-% It may be used as a template for your own input - copy it
-% to a new file with a new name and use it as the basis
-% for your article.
-%
-% NB: the document class 'llncs' has its own and detailed documentation, see
-% ftp://ftp.springer.de/data/pubftp/pub/tex/latex/llncs/latex2e/llncsdoc.pdf
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\documentclass[runningheads,a4paper]{llncs}
-
-\usepackage{amssymb}
-\setcounter{tocdepth}{3}
-\usepackage{graphicx}
-\usepackage{verbatim}
-\usepackage{subcaption}
-\captionsetup{compatibility=false}
-
-\usepackage{url}
-\urldef{\mailsa}\path|{alfred.hofmann, ursula.barth, ingrid.haas, frank.holzwarth,|
-\urldef{\mailsb}\path|anna.kramer, leonie.kunz, christine.reiss, nicole.sator,|
-\urldef{\mailsc}\path|erika.siebert-cole, peter.strasser, lncs}@springer.com|    
-\newcommand{\keywords}[1]{\par\addvspace\baselineskip
-\noindent\keywordname\enspace\ignorespaces#1}
+\documentclass{sig-alternate}
 
 \begin{document}
+%
+% --- Author Metadata here ---
+\conferenceinfo{CIKM}{'2016 Indianapolis, IN USA}
 
-\mainmatter  % start of an individual contribution
-
-% first the title is needed
 \title{What makes a query temporally sensitive?}
 
-% a short form should be given in case it is too long for the running head
-\titlerunning{What makes a query temporally sensitive?}
-
-% the name(s) of the author(s) follow(s) next
-%
-% NB: Chinese authors should write their first names(s) in front of
-% their surnames. This ensures that the names appear correctly in
-% the running heads and the author index.
-%
-
-%\author{Alfred Hofmann
-%\and Ursula Barth\and Ingrid Haas\and Frank Holzwarth\and\\
-%Anna Kramer\and Leonie Kunz\and Christine Rei\ss\and\\
-%Nicole Sator\and Erika Siebert-Cole\and Peter Stra\ss er}
-%
-\authorrunning{}
-% (feature abused for this document to repeat the title also on left hand pages)
-
-% the affiliations are given next; don't give your e-mail address
-% unless you accept that it will be published
-%\institute{Springer-Verlag, Computer Science Editorial,\\
-%Tiergartenstr. 17, 69121 Heidelberg, Germany\\
-%\mailsa\\
-%\mailsb\\
-%\mailsc\\
-%\url{http://www.springer.com/lncs}}
-
-%
-% NB: a more complex sample for affiliations and the mapping to the
-% corresponding authors can be found in the file "llncs.dem"
-% (search for the string "\mainmatter" where a contribution starts).
-% "llncs.dem" accompanies the document class "llncs.cls".
-%
-
-\toctitle{Lecture Notes in Computer Science}
-\tocauthor{Authors' Instructions}
 \maketitle
-
-
 \begin{abstract}
-\keywords{We would like to encourage you to list your keywords within
-the abstract section}
+Here is the abstract
 \end{abstract}
 
+% A category with the (minimum) three required fields
+\category{H.4}{Information Systems Applications}{Miscellaneous}
+
+\terms{}
+
+\keywords{}
 
 \section{Introduction}
 
-A basic intuition in temporal information retrieval research is that time should be modeled explicitly when scoring and ranking documents with respect to users' queries. Users' criteria of recency, currency, and freshness have long been recognized as factors when judging relevance \cite{Barry1998}. A number of studies have investigated the role of time in information retrieval using a variety of methods including query log analysis \cite{Kulkarni2011,Shokouhi2011,Metzler2009}, temporal expression extraction \cite{Berberich2010,Kanhabua2011}, temporal distributions of pseudo-relevant documents \cite{Jones2007}, and temporal retrieval models \cite{Li2003,Efron2011,Dakka2012}. These researchers often refer to general classes of ``temporal queries'' and ``temporal information needs.''  Models have been proposed and evaluated for ``recency queries'' \cite{Li2003,Efron2011}, ``time-sensitive queries'' \cite{Dakka2012}, ``implicitly temporal queries'' \cite{Metzler2009}, and ``temporally biased queries'' \cite{Jones2007}. In a widely cited study, Jones and Diaz propose three different ``temporal classes of queries'' \cite{Jones2007} including temporal, temporally ambiguous, and atemporal.
+A basic intuition in temporal information retrieval research is that time should be modeled explicitly when scoring and ranking documents with respect to users' queries. Users' criteria of recency, currency, and freshness have long been recognized as factors when judging relevance \cite{Barry1998}. A number of studies have investigated the role of time in information retrieval using a variety of methods including query log analysis \cite{Kulkarni2011,Shokouhi2011,Metzler2009}, temporal expression extraction \cite{Berberich2010, Kanhabua2011}, temporal distributions of pseudo-relevant documents \cite{Jones2007}, and temporal retrieval models \cite{Li2003, Efron2011, Dakka2012}. These researchers often refer to general classes of ``temporal queries'' and ``temporal information needs.''  Models have been proposed and evaluated for ``recency queries'' \cite{Li2003, Efron2011}, ``time-sensitive queries'' \cite{Dakka2012}, ``implicitly temporal queries'' \cite{Metzler2009}, and ``temporally biased queries'' \cite{Jones2007}. In a widely cited study, Jones and Diaz propose three different ``temporal classes of queries'' \cite{Jones2007} including temporal, temporally ambiguous, and atemporal.
 
 In this paper, we explore the question: \emph{what makes a query temporally sensitive?}  While many researchers have relied on the manual classification of topics, the methods used for classification are not clearly explained. Researchers refer to vague concepts of ``newsworthiness'' or  the ``\emph{bona fide} temporal dimension'' of topics without clearly explicating the criteria for classification.
 
@@ -102,9 +37,9 @@ We believe that this definition captures the spirit of the concept of \emph{info
 
 \subsection{Time and relevance}
 
-There are numerous notions of temporality in information retrieval research, each of which requires different methodologies for analysis. In this study, we are primarily concerned with what we term as \emph{temporal relevance}. We define this as the condition where information needs are satisfied by documents published at particular points in time. We distinguish this from \emph{temporal topicality} which refers to information needs that are satisfied by documents about certain periods in time. Of course, an information need may combine the two conditions (e.g., find documents about the Wars of the Roses published in the 1800s). Examples of studies concerned with temporal topicality include \cite{Berberich2010,Kanhabua2011}.
+There are numerous notions of temporality in information retrieval research, each of which requires different methodologies for analysis. In this study, we are primarily concerned with what we term as \emph{temporal relevance}. We define this as the condition where information needs are satisfied by documents published at particular points in time. We distinguish this from \emph{temporal topicality} which refers to information needs that are satisfied by documents about certain periods in time. Of course, an information need may combine the two conditions (e.g., find documents about the Wars of the Roses published in the 1800s). Examples of studies concerned with temporal topicality include \cite{Berberich2010, Kanhabua2011}.
 
-There are, of course, other notions of temporality in information retrieval research. For example, \emph{temporal relevance dynamics} is concerned with how the relevance of a document changes with respect to an information need over time \cite{Mizzaro1997},  \emph{temporal query dynamics} is concerned with the study of how queries are issued over time \cite{Shokouhi2011,Vlachos2005,Parikh2008,Lavrenko2000}. Kulkarni et al \cite{Kulkarni2011} combine multiple sources of information -- query logs, click-through logs, web crawler content changes, and human relevance judgments -- to understand the relationship between query dynamics, relevance dynamics, and content dynamics. 
+There are, of course, other notions of temporality in information retrieval research. For example, \emph{temporal relevance dynamics} is concerned with how the relevance of a document changes with respect to an information need over time \cite{Mizzaro1997},  \emph{temporal query dynamics} is concerned with the study of how queries are issued over time \cite{Shokouhi2011, Vlachos2005, Parikh2008, Lavrenko2000}. Kulkarni et al \cite{Kulkarni2011} combine multiple sources of information -- query logs, click-through logs, web crawler content changes, and human relevance judgments -- to understand the relationship between query dynamics, relevance dynamics, and content dynamics. 
 
 \subsection{Time-sensitive queries}
 Li and Croft's study of ``recency queries'' was the first in a line of research focused on what we have termed \emph{temporal relevance}. Temporal relevance is concerned with conditions where documents published at particular points in time are considered more or less relevant than those published at other times. This condition is studied independent of or in conjunction with traditional topical retrieval models. In this section, we review how researchers in this area operationalize the concept of time and define the temporal characteristics of queries in their studies. 
@@ -187,7 +122,7 @@ We use content analysis \cite{Krippendorf1980} to identify characteristics of TR
 
 \begin{table}
 \small
-\begin{tabular}{| l | l|} \hline
+\begin{tabular}{| l |  p{6cm} |} \hline
 \bf{Topics} & \bf{Collections}  \\ \hline
 51-200 & TREC Disks 1-2 AP 88-89; WSJ 87-92 \\ \hline
 301-450 &  TREC Disks 4-5 FT 91-94; LA Times 88-89 \\ \hline
@@ -240,22 +175,6 @@ Our qualitative analysis suggests three broad classes: events, named entities, a
 
 Table \ref{table.codedist} summarizes the percent of topics in each test collection with each code assigned. From these results, we can see that the Novelty and Microblog test collections have a higher percentage of specific events than the Blog and ad-hoc collections. The ad-hoc collections have a higher number of generic events, which supports the findings of Jones and Diaz \cite{Jones2007}. The Blog, Novelty, and Microblog test collections each have larger numbers of named entities in the topic titles and descriptions.
 
-\begin{figure}
-\centering
-\begin{subfigure}{.5\textwidth}
-  \centering
-\includegraphics[width=6cm]{plots/topic-groups-ent.pdf}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
-\includegraphics[width=6cm]{plots/topic-groups-evt.pdf}
-\end{subfigure}
-\caption{Percent of topics in each collection with codes assigned from the (left) entity code group and (right) events code group}
-\label{fig.codedist}
-\end{figure}
-
-
-\begin{comment}
 \begin{table*}
 \small
 \begin{tabular}{| l | l | l | l | l | l | l | l | l | l | l |} \hline
@@ -264,18 +183,13 @@ Topics & ExpDate &	OrgEnt&	OtherEnt&	PersonEnt&	PlaceEnt&	FutureEvt&	GenericEvt&
 \caption{Percent of topics with each code assigned by topic group}
 \label{table.codedist}
 \end{table*}
-\end{comment}
 
 
 \subsection{Reliability}
 
 To assess reliability, a total of 1244 codes were assigned to 330 topics by two coders. The macro percent overlap is 0.71 and  micro percent overlap is 0.83. The per-code overlap is reported in Table \ref{table.overlap}. Higher overlap indicates greater agreement between coders. As expected, some codes have higher agreement than others. Specifically, personal names (0.94), locations (0.91), and explicit dates (0.89) have very high agreement whereas indirect event references (0.19) and generic events (0.45) have lower agreement.
 
-\begin{figure}
-\includegraphics[width=8cm]{plots/coder-agreement.pdf}
-\end{figure}
-
-\begin{comment}
+\begin{ignore}
 \begin{table}
 \small
 \begin{tabular}{| l | l |} \hline
@@ -293,7 +207,7 @@ IndirectEventReference & 0.19  \\ \hline
 \caption{Per-code percent overlap }
 \label{table.overlap}
 \end{table}
-\end{comment}
+\end{ignore}
 
 \subsection{Regression analysis}
 
@@ -395,29 +309,26 @@ This section is optional
 \bibliographystyle{abbrv}
 \bibliography{temporalir}  
 
-\section*{Appendix: Codebook}
+\appendix
+
+
 \begin{table*}[H]
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{| p{3cm} | p{6cm}  | p{6cm} |} \hline
+\small
+\begin{tabular}{| l | p{7cm}  | p{7cm}  |} \hline
 \bf{Code} & \bf{Description} & \bf{Examples}  \\ \hline
-Specific Event & Something significant that happens at a specific time and place. Code title and description in concert, even if title does not contain event specifics. & Mount Pinatubo erruption on June 15, 1991; 2008 State of the Union; Hurricane Hugo \\ \hline
-Generic Event & Use this code when the topic refers to more than one specific event or a class or type of event. Only use this code if every instance of the event type would be newsworthy (i.e., a specific event) and the central topic of a news article. & Earthquakes, volcano erruptions, elections, disputes, strikes \\ \hline
-Indirect Event Reference & Apply this code to indicate when the topic might be indirectly referring to a *specific* event. Use only if you need to turn to external information to identify potential specific events (e.g., your personal knowledge, wikipedia). Do not use if specific event information is contained in the description. & Legally assisted suicide, related to Kevorkian controversy. Partial birth abortion ban, related to partial birth abortion ban legislation. Surrogacy related to Baby M. \\ \hline
-Periodic Event & Apply this code to indicate when an event is periodic, recurring at regular, predictable intervals. Never double-code as SpecificEvent or as an entity even though periodic events are often named entities. & Super bowl, Nobel awards, Oscars, State of the Union \\ \hline
+SpecificEvent & Something significant that happens at a specific time and place. Code title and description in concert, even if title does not contain event specifics. & Mount Pinatubo erruption on June 15, 1991; 2008 State of the Union; Hurricane Hugo \\ \hline
+GenericEvent & Use this code when the topic refers to more than one specific event or a class or type of event. Only use this code if every instance of the event type would be newsworthy (i.e., a specific event) and the central topic of a news article. & Earthquakes, volcano erruptions, elections, disputes, strikes \\ \hline
+IndirectEventReference & Apply this code to indicate when the topic might be indirectly referring to a *specific* event. Use only if you need to turn to external information to identify potential specific events (e.g., your personal knowledge, wikipedia). Do not use if specific event information is contained in the description. & Legally assisted suicide, related to Kevorkian controversy. Partial birth abortion ban, related to partial birth abortion ban legislation. Surrogacy related to Baby M. \\ \hline
+PeriodicEvent & Apply this code to indicate when an event is periodic, recurring at regular, predictable intervals. Never double-code as SpecificEvent or as an entity even though periodic events are often named entities. & Super bowl, Nobel awards, Oscars, State of the Union \\ \hline
 FutureEvent & Apply this code to indicate when a topic refers to a future predicted specific event. Never double-code as SpecificEvent. & 2020 Fifa, 2016 Summer Olympics \\ \hline
-Person Entity & Apply this code to identify personal names in topics. & President Bush; Sasha Cohen;  \\ \hline
-Place Entity & Apply this code to identify places in topics. Limit to proper names. Also apply to references to nations, governments or government bodies. & Peru; Africa; African; European; Atlanta \\ \hline
-Organization Entity & Apply this code to identify organizations in topics. Limit to proper names. Do not apply to references to governments (e.g., United States), use PlaceEntity instead. & Hitachi Data Systems; U.S. Congress; \\ \hline
-Other Entity & Apply this code to named entities that are not people, places or organizations. Limit to proper names. Includes movies, books., etc. & Hubble Telescope; The Avengers; Euro	\\ \hline
-Explicit Date & Apply this code to identify explicit dates. & 1988; June 15, 1991; October 2007; Monday \\ \hline
-\end{tabular}}
+PersonEntity & Apply this code to identify personal names in topics. & President Bush; Sasha Cohen;  \\ \hline
+PlaceEntity & Apply this code to identify places in topics. Limit to proper names. Also apply to references to nations, governments or government bodies. & Peru; Africa; African; European; Atlanta \\ \hline
+OrganizationEntity & Apply this code to identify organizations in topics. Limit to proper names. Do not apply to references to governments (e.g., United States), use PlaceEntity instead. & Hitachi Data Systems; U.S. Congress; \\ \hline
+OtherEntity & Apply this code to named entities that are not people, places or organizations. Limit to proper names. Includes movies, books., etc. & Hubble Telescope; The Avengers; Euro	\\ \hline
+ExplicitDate & Apply this code to identify explicit dates. & 1988; June 15, 1991; October 2007; Monday \\ \hline
+\end{tabular}
 \caption{Codebook}
 \label{table.codebook}
 \end{table*}
-
-
-
-
-
 
 \end{document}

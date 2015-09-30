@@ -1,0 +1,10 @@
+Code,Agreement
+IndEvtRefe,0.19
+GenEvt,0.45
+OtherEnt,0.52
+SpecEvt,0.64
+OrgEnt,0.76
+PerEvt,0.85
+ExpDate,0.89
+PlEnt,0.91
+PerEnt,0.94

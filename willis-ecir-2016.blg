@@ -6,50 +6,50 @@ Database file #1: temporalir.bib
 Warning--I didn't find a database entry for "Taylor"
 Warning--I didn't find a database entry for "Wilson"
 Warning--I didn't find a database entry for "Cole"
-Warning--I didn't find a database entry for "Chan1972"
+Warning--I didn't find a database entry for "Vlachos2005"
 Warning--I didn't find a database entry for "Krippendorf1980"
-Warning--empty journal in Dai
-Warning--empty year in Dai
+Warning--I didn't find a database entry for "He2007"
+Warning--I didn't find a database entry for "XXX"
 Warning--there's a number but no volume in Metzler2009
-You've used 19 entries,
+You've used 16 entries,
             2118 wiz_defined-function locations,
-            639 strings with 7338 characters,
-and the built_in function-call counts, 6856 in all, are:
-= -- 687
-> -- 305
-< -- 12
-+ -- 119
-- -- 100
-* -- 431
-:= -- 1089
-add.period$ -- 56
-call.type$ -- 19
-change.case$ -- 107
+            624 strings with 6829 characters,
+and the built_in function-call counts, 5679 in all, are:
+= -- 568
+> -- 251
+< -- 10
++ -- 98
+- -- 82
+* -- 349
+:= -- 906
+add.period$ -- 47
+call.type$ -- 16
+change.case$ -- 89
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 302
-empty$ -- 503
-format.name$ -- 100
-if$ -- 1486
+cite$ -- 17
+duplicate$ -- 253
+empty$ -- 421
+format.name$ -- 82
+if$ -- 1234
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 18
-newline$ -- 97
-num.names$ -- 38
-pop$ -- 120
+int.to.str$ -- 16
+missing$ -- 15
+newline$ -- 82
+num.names$ -- 32
+pop$ -- 99
 preamble$ -- 1
-purify$ -- 88
+purify$ -- 73
 quote$ -- 0
-skip$ -- 253
+skip$ -- 212
 stack$ -- 0
-substring$ -- 386
-swap$ -- 112
-text.length$ -- 12
+substring$ -- 308
+swap$ -- 94
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 76
-warning$ -- 3
-while$ -- 69
-width$ -- 21
-write$ -- 205
+type$ -- 64
+warning$ -- 1
+while$ -- 57
+width$ -- 18
+write$ -- 174
 (There were 8 warnings)
