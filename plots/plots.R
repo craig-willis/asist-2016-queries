@@ -20,11 +20,10 @@ ggplot(evt, aes(factor(Topic), Pct, fill = Code)) +
 dev.off()
 
 
-pdf("coder-agreement.pdf")
 ag <- read.csv("coder-agreement.dat", header=T)
-ggplot(ag, aes(reorder(Code, -Agreement), Agreement), fill=Code) + 
-  geom_bar(width=0.5, stat = "identity") + 
+gp <- ggplot(ag, aes(reorder(Code, -Agreement), Agreement)) + 
+  geom_bar(width=0.2, stat = "identity", position = position_dodge(width=1)) + 
   coord_flip() + 
-  labs(x="Percent agreement", x="Codes")
-dev.off()
+  labs(y="Percent agreement", x="Codes")  + ylim(0, 1)
+ggsave(gp, file="coder-agreement.pdf", width=6, height=2)
 
