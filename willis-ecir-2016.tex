@@ -267,17 +267,17 @@ In this section, were report the results of a logistic regression analysis, pred
 \begin{table*}
 \small
 \begin{tabular}{| l | l | l | l | l |} \hline
-\bf{Name} & \bf{Model} & \bf{AIC} & \bf{$R^2$} \\ \hline
-Novelty 	&  $-3.767 + 5.848*SpecEvt + 2.523*Other$& 52 & 0.669 \\ \hline
-Novelty (Rel)		&  $-3.539 + 7.006*SpecEvt + 2.530*Other - 7.343*ACF$ & 49 & 0.706 \\ \hline
-Dakka	&  $0.134 + 0.878*Place$  & 205 & 0.020 \\ \hline
-Dakka (Rel) 		& $-0.917 + 0.393*DPS_{FT}$ 	& 155 & 0.263  \\ \hline
-Efron	& $-1.765 + 2.353*Place + 1.410*Other$ & 150 & 0.181 \\ \hline
-Efron (Rel) 		& $-2.727 + 1.965*Place + 1.787*Other + 0.163*DPS_{FT}$ & 118 & 0.377 \\ \hline
-Peetz & $-0.336 + 1.682*SpecEvt + 0.982*PerEvt + 0.672*Person -0.6175*OrgEnt$ & 192 & 0.127 \\ \hline
-Peetz (Rel) 		& $-1.245 + 1.218*SpecEvt + 0.797*Person + 2.835*ACF + 0.002*DPS$ & 171 & 0.223 \\ \hline
+\bf{Name} & \bf{Model}  & \bf{$R^2$} \\ \hline
+Novelty 	&  $-3.767 + 5.848 \cdot SpecEvt + 2.523 \cdot Other$& 0.669 \\ \hline
+Novelty (Rel)		&  $-3.539 + 7.006  \cdot SpecEvt + 2.530  \cdot Other - 7.343 \cdot ACF$  & 0.706 \\ \hline
+Dakka	&  $0.134 + 0.878 \cdot Place$   & 0.019 \\ \hline
+Dakka (Rel) 		& $-0.917 + 0.393 \cdot DPS^\blacktriangle$ & 0.263  \\ \hline
+Efron	& $-1.765 + 2.353*Place^\blacktriangle + 1.410 \cdot Other^\circ$  & 0.181 \\ \hline
+Efron (Rel) 		& $-2.727 + 1.965 \cdot Place^\blacktriangle + 1.787 \cdot Other^\vartriangle + 0.163 \cdot DPS^\blacktriangle$& 0.377 \\ \hline
+Peetz & $-0.336 + 1.682*SpecEvt^\circ + 0.982 \cdot PerEvt + 0.672 \cdot Person -0.6175 \cdot Org$ & 0.127 \\ \hline
+Peetz (Rel) 		& $-1.245 + 1.218 \cdot SpecEvt + 0.797 \cdot Period + 2.835 \cdot ACF^\circ  + 0.002 \cdot DPS$ & 0.223 \\ \hline
 \end{tabular}
-\caption{Logistic regression models for each test collection with and without (Rel) ACF/DPS variables. Model fit reported based pseudo-$R^2$ after stepwise variable selection based on AIC.}
+\caption{Logistic regression models for each test collection with and without (Rel) ACF/DPS variables. Model fit reported based pseudo-$R^2$ after stepwise variable selection based on AIC. $^\circ < 0.05 ^\vartriangle < 0.01 ^\blacktriangle < 0.001$ }
 \label{table.regresults}
 \end{table*}
 
@@ -318,7 +318,7 @@ This section is optional
 \bibliography{temporalir}  
 
 \section*{Appendix: Codebook}
-\begin{table*}[H]
+\begin{table*}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{| p{3cm} | p{6cm}  | p{6cm} |} \hline
 \bf{Code} & \bf{Description} & \bf{Examples}  \\ \hline
