@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.6.22)  5 OCT 2015 15:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.6.22)  14 OCT 2015 10:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -378,109 +378,92 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 
-{/usr/local/texlive/2014basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/local/texlive/2014basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
+]
+[3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
+[]\OT1/cmr/m/n/9 Legally as-sisted sui-cide, re-lated to
+ []
 
-LaTeX Warning: Citation `Vlachos2005' on page 2 undefined on input line 111.
 
-[2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]
-
-LaTeX Warning: Citation `Krippendorf1980' on page 4 undefined on input line 139
-.
-
-[4]
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 162.
+Underfull \hbox (badness 1622) in paragraph at lines 171--171
+[]\OT1/cmr/m/n/9 Apply this code to in-di-cate when an
+ []
 
 [5]
 
-LaTeX Warning: Citation `He2007' on page 6 undefined on input line 199.
+LaTeX Font Warning: Command \small invalid in math mode on input line 181.
 
-[6]
-
-LaTeX Warning: Citation `XXX' on page 7 undefined on input line 211.
-
-[7] <plots/topic-groups-ent.pdf, id=42, 505.89pt x 505.89pt>
+[6] [7] <plots/topic-groups-ent.pdf, id=42, 505.89pt x 505.89pt>
 File: plots/topic-groups-ent.pdf Graphic file (type pdf)
 
 <use plots/topic-groups-ent.pdf>
-Package pdftex.def Info: plots/topic-groups-ent.pdf used on input line 230.
+Package pdftex.def Info: plots/topic-groups-ent.pdf used on input line 246.
 (pdftex.def)             Requested size: 170.71652pt x 170.71892pt.
 
 <plots/topic-groups-evt.pdf, id=43, 505.89pt x 505.89pt>
 File: plots/topic-groups-evt.pdf Graphic file (type pdf)
 
 <use plots/topic-groups-evt.pdf>
-Package pdftex.def Info: plots/topic-groups-evt.pdf used on input line 234.
+Package pdftex.def Info: plots/topic-groups-evt.pdf used on input line 250.
 (pdftex.def)             Requested size: 170.71652pt x 170.71892pt.
 
 <plots/coder-agreement.pdf, id=44, 433.62pt x 144.54pt>
 File: plots/coder-agreement.pdf Graphic file (type pdf)
 
 <use plots/coder-agreement.pdf>
-Package pdftex.def Info: plots/coder-agreement.pdf used on input line 262.
+Package pdftex.def Info: plots/coder-agreement.pdf used on input line 253.
 (pdftex.def)             Requested size: 312.9803pt x 104.33116pt.
 
-Overfull \hbox (45.18056pt too wide) in paragraph at lines 273--284
-[][] 
+Overfull \hbox (45.18056pt too wide) in paragraph at lines 288--299
+ [][] 
  []
 
-[8 <./plots/topic-groups-ent.pdf> <./plots/topic-groups-evt.pdf>] [9 <./plots/c
-oder-agreement.pdf>]
-Overfull \hbox (2.30536pt too wide) in paragraph at lines 298--299
-\OT1/cmr/m/n/10 hen's $\OML/cmm/m/it/10 ^^T$ \OT1/cmr/m/n/10 is used for inter-
-coder re-li-a-bil-ity. AP=0.554, Blog06=0.857, Tweets=0.482
- []
-
-[10] (./willis-ecir-2016.bbl [11])
-Underfull \hbox (badness 10000) in paragraph at lines 339--339
-[]\OT1/cmr/m/n/9 Legally as-sisted sui-cide, re-lated to
- []
-
-
-Underfull \hbox (badness 1622) in paragraph at lines 339--339
-[]\OT1/cmr/m/n/9 Apply this code to in-di-cate when an
- []
-
-[12] (./willis-ecir-2016.aux) ) 
+[8] [9 <./plots/topic-groups-ent.pdf> <./plots/topic-groups-evt.pdf> <./plots/c
+oder-agreement.pdf>] [10] [11]
+<images/301.png, id=78, 684.5575pt x 604.2575pt>
+File: images/301.png Graphic file (type png)
+ <use images/301.png>
+Package pdftex.def Info: images/301.png used on input line 339.
+(pdftex.def)             Requested size: 312.9803pt x 276.27452pt.
+ [12 <./images/301.png>] (./willis-ecir-2016.bbl [13]) [14] (./willis-ecir-2016
+.aux) ) 
 Here is how much of TeX's memory you used:
- 4043 strings out of 494522
- 58996 string characters out of 6167205
- 133676 words of memory out of 5000000
- 7241 multiletter control sequences out of 15000+600000
+ 4044 strings out of 494522
+ 59000 string characters out of 6167205
+ 134686 words of memory out of 5000000
+ 7239 multiletter control sequences out of 15000+600000
  10958 words of font info for 42 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 42i,20n,40p,1391b,376s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014basic/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2014basic/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014basic/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2014basic/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2014basic/tex
-mf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/2014b
-asic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2
-014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texliv
-e/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/tex
-live/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/
-texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loc
-al/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></us
-r/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></
-usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-</usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pf
-b></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy6.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy7.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy9.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmti10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmti9.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/publ
-ic/amsfonts/symbols/msam7.pfb>
-Output written on willis-ecir-2016.pdf (12 pages, 294146 bytes).
+ 42i,20n,40p,1393b,376s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmbx9.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmex10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/publ
+ic/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014basic/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2014basic/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2014basic/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2014basic/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2014basic/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014basic/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2014basi
+c/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2014ba
+sic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014
+basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/20
+14basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/tex
+live/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/
+texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/loc
+al/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr
+/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></
+usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
+7.pfb>
+Output written on willis-ecir-2016.pdf (14 pages, 323790 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
+ 162 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

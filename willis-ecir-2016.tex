@@ -89,26 +89,25 @@ the abstract section}
 
 \section{Introduction}
 
-A basic intuition in temporal information retrieval research is that time should be modeled explicitly when scoring and ranking documents with respect to users' queries. Time-related criteria such as recency, currency, and freshness have long been recognized as factors in studies of relevance\cite{Barry1998}. Based on these criteria, information retrieval researchers have explored a variety of temporal retrieval models \cite{Li2003,Efron2011,Dakka2012} that explicitly incorporate time into the document ranking. These researchers refer to general classes of ``temporal queries'' or ``temporal information needs.''  Models have been proposed and evaluated for ``recency queries'' \cite{Li2003,Efron2011}, ``time-sensitive queries'' \cite{Dakka2012}, ``implicitly temporal queries'' \cite{Metzler2009}, and ``temporally biased queries'' \cite{Jones2007}. For evaluation, these studies rely on manual classifications of topics into temporal categories.
+A basic intuition in temporal information retrieval research is that time should be modeled explicitly when scoring and ranking documents with respect to users' queries. Time-related criteria such as recency, currency, and freshness have long been recognized as factors in studies of relevance \cite{Barry1998}. Based on these criteria, information retrieval researchers have explored a variety of temporal retrieval models that explicitly incorporate time into the document ranking \cite{Li2003,Efron2011,Dakka2012}. Researchers often refer to general classes of ``temporal queries'' or ``temporal information needs.''  Models have been proposed and evaluated for ``recency queries'' \cite{Li2003,Efron2011}, ``time-sensitive queries'' \cite{Dakka2012}, ``implicitly temporal queries'' \cite{Metzler2009}, and ``temporally biased queries'' \cite{Jones2007}.  For evaluation,  studies rely on the manual classifications of topics into temporal categories.
 
-In this paper, we take a deeper look into these manually classified topics to develop a clearer understanding of \emph{what makes a query temporally sensitive}? While many researchers have relied on these manually classified topics, the methods used for classification are not clearly explained.  Researchers often refer to vague concepts of ``newsworthiness'' or a ``bona fide temporal dimension'' of topics without clear explanation of the criteria or processes used in classification. As such, using these manually classified topics for evaluation is of limited value, since we cannot be clear on the process that is being modeled. The study presented in this paper is a necessary step in temporal information retrieval research.
+In this paper, we take a deeper look into these manually classified topics to develop a clearer understanding of \emph{what makes a query temporally sensitive}? While many researchers have relied on manually classified topics, the methods used for classification are not clearly explicated. Manual classifications often conflate the temporal distribution of judged-relevant documents with common-sense notions of temporality without a clear explanation of the criteria or processes used in classification. As such, using these manually classified topics for evaluation is of limited value, since we cannot be clear on the processes being modeled. 
 
-To address our question, we analyze  660 topics from the Text Retrieval Conference (TREC) previously used in the experimental evaluation of temporal retrieval models. We employ qualitative techniques to identify characteristics of topics that might affect manual assessment of ``temporality.'' The resulting coded topics are used in a set of regression analyses to determine the specific relationships between these characteristics and manually assigned categories. Finally, we use the coded topics to predict when temporally-sensitive retrieval models might be effective.
+To address this question, we analyze  660 topics from the Text Retrieval Conference (TREC) previously used in the experimental evaluation of temporal retrieval models. We employ qualitative techniques to identify characteristics of topics that might affect the manual assessment of ``temporal-sensitivity.'' The resulting coded topics are used in a set of regression analyses to determine the specific relationships between these characteristics and manually assigned categories. 
 
-This paper is structured as follows....
+This paper is structured as follows: section 2 presents background information for this study. Section 3 describes the qualitative coding and analysis methods followed by the results in Section 4. Section 5 includes a discussion of the results and conclusions.
 
 \section{Background}
 
-\subsection{What is a TREC topic?}
-The test collections developed for TREC generally consist of a collection of documents, a set of topics, and a set of relevance judgments. Although the methods of creation have changed over time, TREC topics are generally intended to mimic real users' information needs. Topics are contained in a set of structured text files associated with the test collection and generally consist of a title and description. Some collections include more detailed narratives, while others may have only a short title or query string without a detailed description of the information need.
+This section presents background information about TREC topics and how they have been classified and used in the evaluation of temporal retrieval models.
 
-The concept of  an \emph{information need} has been extensively discussed in the information science literature and is widely used in the information retrieval community. Here we define an \emph{information need} as the unobservable motivation behind individual users' information seeking. Information needs reflect the individual user's current state of mind and context, including social and cultural environments. While information needs themselves are not observable, user's information seeking behaviors -- including queries and document relevance judgements -- are incomplete but observable evidence of the underlying need.  We believe that this definition captures the spirit of the concept of \emph{information need} as commonly used in information retrieval research, particularly in the case of ``topics'' in TREC.
+\subsection{TREC topics}
+
+Test collections developed for TREC generally consist of a collection of documents, a set of topics, and associated relevance judgments. Document collections may be from a single source (e.g., microblog) or composed of multiple sub-collections with distinct start and end dates (e.g., TREC8).  Although the methods of creation have changed over time, TREC topics are generally intended to mimic real users' information needs with respect to the underlying document collection. Topics are distributed in a set of structured text files and typically consist of a title and description.  Temporal information retrieval researchers generally use the topic title as a short query and the title/description for manual analysis and classification.
 
 \subsection{Time and relevance}
 
 There are numerous notions of temporality in information retrieval research, each of which requires different methodologies for analysis. In this study, we are primarily concerned with what we term as \emph{temporal relevance}. We define this as the condition where information needs are satisfied by documents published at particular points in time. We distinguish this from \emph{temporal topicality} which refers to information needs that are satisfied by documents about certain periods in time. Of course, an information need may combine the two conditions. Examples of studies concerned with temporal topicality include \cite{Berberich2010,Kanhabua2011}.
-
-There are, of course, other notions of temporality in information retrieval research. For example, \emph{temporal relevance dynamics} is concerned with how the relevance of a document changes with respect to an information need over time \cite{Mizzaro1997}; \emph{temporal query dynamics} is concerned with the study of how queries are issued over time \cite{Shokouhi2011,Vlachos2005,Parikh2008,Lavrenko2000}; and \emph{temporal content dynamics} is concerned with the effects of content changes over time \cite{Kulkarni2011}.
 
 In the next section we review examples of studies focused on  \emph{temporal relevance}.
 
@@ -133,10 +132,10 @@ In the next section we report the methods used in our analysis of  660 TREC topi
 
 \section{Methods}
 
-In the studies reviewed above, researchers rely on existing test collections, such as those available through TREC, to evaluate temporal retrieval models. In each study, topics are manually categorized as temporal or non-temporal to assess model performance. The purpose of this study is to further investigate the characteristics of topics deemed temporal. To achieve this, we use a combination of qualitative content analysis and regression analysis, as described below.
+In the studies reviewed above, researchers rely in part on existing TREC test collections to evaluate proposed temporal retrieval models. In each study, topics are manually categorized (e.g.,  temporal or non-temporal) to assess model performance. The purpose of this study is to further investigate the characteristics of topics deemed temporal. To achieve this, we use a combination of qualitative content analysis and regression analysis, as described below.
 
 \subsection{Qualitative coding}
-We use content analysis \cite{Krippendorf1980} to identify characteristics of TREC topics potentially associated with temporal sensitivity. 660 topics were selected from the TREC Ad-hoc, Novelty, Blog, and Microblog tracks. These topics were selected because they have previously been used by researchers to evaluate temporal retrieval models and have associated manual classifications or are from collections with known temporal characteristics (i.e., Microblog). The complete set of topics used in this study are listed in Table \ref{table.topics} along with the temporal constraints of each collection or sub collection.
+We use content analysis \cite{Krippendorff1980} to identify characteristics of TREC topics potentially associated with temporal sensitivity. 660 topics were selected from the TREC Ad-hoc, Novelty, Blog, and Microblog tracks. These topics were selected because they have previously been used by researchers to evaluate temporal retrieval models and have associated manual classifications or are from collections with known temporal characteristics (i.e., Microblog). The complete set of topics used in this study are listed in Table \ref{table.topics} along with the temporal constraints of each collection or sub collection.
 
 \begin{table}
 \center
@@ -155,169 +154,6 @@ MB1-110 & Tweets 2011 (Jan 24, 2011 - Feb 8th, 2011) \\ \hline
 
 Two of the authors participated in the development of the codebook and subsequent coding of topics. Codebook development began with a preliminary reading of all topic titles, descriptions and narratives. Codes were defined based on characteristics of topics expected to be related to temporal sensitivity, informed by the literature. Of the 660 topics, 330 were coded by both coders. During this process, code definitions were refined and clarified. In the final coding, only topic title and description were used. The final codebook is presented in Table \ref{table.codebook} in the appendix. Coding was completed using the Dedoose\footnote{http://www.dedoose.com} service.  
 
-An example of a coded topic from the 2004 Novelty test collection is presented in Figure \ref{fig.example}.  This topic refers to a specific event and contains place entities as well as an explicit date.  Topic N57 is categorized as an ``event'' by the TREC topic creator and is therefore an unambiguous temporal topic as defined by Jones and Diaz.
-
-\begin{figure}
-\begin{equation*}
-\small
-\begin{split}
-\mbox{\bf{Title}:} & \big[(\mbox{East Timor})_{PlaceEntity} \mbox{Independence}\big]_{SpecificEvent} \\
-\mbox{\bf{Description}:} & \big[  (\mbox{East Timor})_{PlaceEntity} \mbox{ vote for independence from } \\
-	& (\mbox{Indonesia})_{PlaceName} \mbox{ in } (\mbox{August 1999})_{ExplicitDate}\big]_{SpecificEvent}
-\end{split}
-\end{equation*}
-\caption{TREC Novelty 2004 topic N57 example annotation}
-\label{fig.example}
-\end{figure}
-
-In addition to coding the topics based on the defined codes, the coders assigned a temporal designation to the distribution of relevant documents for each topic. Graphs were generated for each topic with more than 20 relevant documents.  A non-parametric density is fit to the relevant document distribution. Each coder reviewed the relevant document distribution along with the total number of relevant documents for each topic and assigned one of four values:  too few observations (-1), low or no temporality (0), moderate temporality (1), and high temporality (2). These designations are included as features in the regression analysis and compared to the ACF and DPS values used as proxies of the relevant document distribution.
- 
-After coding all 660 topics, the topic/code matrix was exported for subsequent reliability and regression analysis, as described in the following sections. 
-
-\subsection{Reliability analysis}
-
-For this study, coding reliability is measuring using Cohen's $\kappa$ for classification of the relevant document. A variation of percent overlap is used for the broader qualitative coding, since coding is performed on arbitrary segments of text in each topic.  We define the \emph{percent overlap} as:
-
-\[
-overlap = \frac{m}{m + u_1 + u_2} 
-\]
-
-Where $m$ is the number of excerpts assigned the same code by both coders, $u_1$ is the number of codes assigned to excerpts only by coder 1 and $u_2$ is the number of codes assigned to excerpts only by coder 2. If both coders assign no codes to a topic, this is considered perfect agreement. We report the macro overlap calculated over all topics, the micro overlap calculated as a per-topic average, and per-code overlaps to understand coder agreement within each category.
-
-For the final designation of topic temporality, coder agreement is measured by Cohen's $\kappa$.
-
-\subsection{Relevant document distributions}
-
-In each of the four prior studies, the authors acknowledge using the distribution of judged-relevant or pseudo-relevant documents in determining topic temporality. For this study, we use two different measures to represent these distributions: the first-order time series autocorrelation (ACF) and the dominant power spectrum (DPS).
-
-Jones and Diaz \cite{Jones2007} use the ACF created by the temporal distribution of pseudo relevant documents for a query as a predictor of query temporality. They note that queries with strong inter-day dependencies will have high ACF values, indicating predictability in the time series. The first-order autocorrelation of the time series is defined as:
-
-\begin{equation}
-r_1 = \dfrac{\sum_{i=1}^{N-1} (x_t - \bar{x}_{(1)})(x_{t+1} - \bar{x}_{(2)})}{ \big [ \sum_{i=1}^{N-1}  (x_t - \bar{x}_{(1)})^2 \big ] ^{1/2} \big [\sum_{i=1}^{N-1} (x_{t+1} - \bar{x}_{(2)})^2 \big ]^{1/2}}
-\end{equation}
-
-He, Chang, and Lim \cite{He2007} use the DPS as a predictor of the ``burstiness'' of temporal features for event detection. The DPS is the highest power spectrum, estimated using the periodogram. The periodogram is the sequence of the squared magnitude of the Fourier coefficients $\Vert X_k \Vert^2$ indicating the signal power at frequency $k/T$ in the spectrum.  The discrete Fourier transform is defined as: 
-\begin{equation}
-X_k = \sum_{t=1}^T y_f(t)e^{\frac{2\pi i}{T}(k - 1)t}, t=1,2,....T
-\end{equation}
-
-In this study, both of these measures are used to represent the distribution of judged-relevant or pseudo-relevant documents for the regression analysis, as described in the next section.
-
-\subsection{Regression analysis}
-
-A primary goal of this study is to determine the characteristics that contribute to the judgment of topic temporality. We use logistic regression using the generalized linear model (GLM) implementation in R. The predictors are binary presence indicators for each of the qualitative codes along with the first-order autocorrelation and dominant power spectra of the temporal distribution of true-relevant documents.  The response variables are the binary temporal/non-temporal indicators manually assigned in the four studies.  Model variables are selected using standard step-wise procedures based on the Akaike information criterion (AIC). Coefficients are reported using the log-odds and model fit is assessed using pseudo $R^2$.
-
-\subsection{Predicting temporal model effectiveness}
-Next, we develop standard linear regression models to predict whether to use a temporal retrieval model for each topic. We use the standard query likelihood \cite{XXX} and kernel density estimate (KDE) temporal mode \cite{Efron2014} to measure query temporality. The response variable is the difference in average precision (AP) between KDE and QL for each topic. The predictors are the assigned codes represented by binary indicators and the ACF and DPS of the temporal distribution of the top 1000 pseudo-relevant documents using the QL score.
-
-\section{Results}
-
-What are the characteristics of topics that affect the manual assessment of topic temporality? 
-
-\subsection{Codes}
-
-Our qualitative analysis suggests three broad classes: events, named entities, and explicit dates. A basic intuition is that topics focused on a specific and important events will have a higher degree of temporal relevance. Following the TDT definition, seminal events happen at specific times in specific places, often to individuals or other named entities (e.g., organizations). Perhaps the most essential code is the ``SpecificEvent'' -- something important that happens at a particular time and place. Related to SpecificEvent is the PeriodicEvent, which refers to an event that recurs periodically, such as the Super Bowl, World Cup, or Olympics. Jones and Diaz \cite{Jones2007} note that many of the early ad-hoc queries were temporally ambiguous, referring to multiple events. We incorporate this concept through the ``GenericEvent'' code, which captures topics concerned with a class of specific events, such as earthquakes, elections, or strikes. While analyzing topics, it became apparent that some topics were likely to be inspired by a specific event, but the event is not referenced in the topic description. This concept is captured through the ``IndirectEventReference'' code. The remaining codes are concerned with the identification of specific types of named entities, which are expected to have some  association with topic temporality.
-
-
-\subsection{Code distributions}
-
-Figure \ref{fig.codedist} summarizes the percent of topics in each test collection with each code assigned. From these results, we can see that the Novelty and Microblog  collections have a higher percentage of specific events than the Blog and ad-hoc collections. The ad-hoc collections have a higher number of generic events, which supports the findings of Jones and Diaz \cite{Jones2007}. The Blog, Novelty, and Microblog test collections each have larger numbers of named entities in the topic titles and descriptions.
-
-\begin{figure}
-\centering
-\begin{subfigure}{.5\textwidth}
-  \centering
-\includegraphics[width=6cm]{plots/topic-groups-ent.pdf}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
-\includegraphics[width=6cm]{plots/topic-groups-evt.pdf}
-\end{subfigure}
-\caption{Percent of topics in each collection with codes assigned from the (left) entity code group and (right) events code group}
-\label{fig.codedist}
-\end{figure}
-
-
-\begin{comment}
-\begin{table*}
-\small
-\begin{tabular}{| l | l | l | l | l | l | l | l | l | l | l |} \hline
-Topics & ExpDate &	OrgEnt&	OtherEnt&	PersonEnt&	PlaceEnt&	FutureEvt&	GenericEvt&	IndEvtRef &	PerEvt&	SpecEvt \\ \hline301-450	&	0.01&	0.03&	0.11&	0.01&	0.20&	0.00&	0.21&	0.04&	0.01&	0.03 \\ \hline851-1050	&	0.02&	0.37&	0.31&	0.26&	0.14&	0.00&	0.01&	0.08&	0.18&	0.15 \\ \hlineN1-N100	&	0.29&	0.18&	0.17&	0.28&	0.49&	0.00&	0.02&	0.05&	0.06&	0.56 \\ \hlineMB1-110	&	0.02&	0.23&	0.14&	0.26&	0.21&	0.02&	0.05&	0.07&	0.12&	0.43 \\ \hline
-\end{tabular}
-\caption{Percent of topics with each code assigned by topic group}
-\label{table.codedist}
-\end{table*}
-\end{comment}
-
-
-\subsection{Reliability}
-
-To assess coding reliability, a total of 1244 codes were assigned to 330 topics by the two coders. The macro percent overlap is 0.71 and  micro percent overlap is 0.83. The per-code overlap is reported in Figure \ref{fig.overlap}. Higher overlap indicates greater agreement between coders. As expected, some codes have higher agreement than others. Specifically, personal names (0.94), locations (0.91), and explicit dates (0.89) have very high agreement whereas indirect event references (0.19) and generic events (0.45) have lower agreement.
-
-\begin{figure}
-\includegraphics[width=11cm]{plots/coder-agreement.pdf}
-\caption{Percent overlap by code} 
-\label{fig.overlap}
-\end{figure}
-
-\subsection{Regression analysis}
-
-In this section, were report the results of a logistic regression analysis, predicting the manually assigned categories for each test collection. The resulting models are reported in Table \ref{table.regresults}. 
-
-\begin{table*}
-\small
-\begin{tabular}{| l | l | l | l | l |} \hline
-\bf{Name} & \bf{Model}  & \bf{$R^2$} \\ \hline
-Novelty 	&  $-3.767 + 5.848 \cdot SpecEvt + 2.523 \cdot Other$& 0.669 \\ \hline
-Novelty (Rel)		&  $-3.539 + 7.006  \cdot SpecEvt + 2.530  \cdot Other - 7.343 \cdot ACF$  & 0.706 \\ \hline
-Dakka	&  $0.134 + 0.878 \cdot Place$   & 0.019 \\ \hline
-Dakka (Rel) 		& $-0.917 + 0.393 \cdot DPS^\blacktriangle$ & 0.263  \\ \hline
-Efron	& $-1.765 + 2.353*Place^\blacktriangle + 1.410 \cdot Other^\circ$  & 0.181 \\ \hline
-Efron (Rel) 		& $-2.727 + 1.965 \cdot Place^\blacktriangle + 1.787 \cdot Other^\vartriangle + 0.163 \cdot DPS^\blacktriangle$& 0.377 \\ \hline
-Peetz & $-0.336 + 1.682*SpecEvt^\circ + 0.982 \cdot PerEvt + 0.672 \cdot Person -0.6175 \cdot Org$ & 0.127 \\ \hline
-Peetz (Rel) 		& $-1.245 + 1.218 \cdot SpecEvt + 0.797 \cdot Period + 2.835 \cdot ACF^\circ  + 0.002 \cdot DPS$ & 0.223 \\ \hline
-\end{tabular}
-\caption{Logistic regression models for each test collection with and without (Rel) ACF/DPS variables. Model fit reported based pseudo-$R^2$ after stepwise variable selection based on AIC. $^\circ < 0.05 ^\vartriangle < 0.01 ^\blacktriangle < 0.001$ }
-\label{table.regresults}
-\end{table*}
-
-For the 2003-2004 Novelty collection, the response variable is the manually assigned ``opinion'' (0) or ``event'' (1) categories.  Following Jones and Diaz \cite{Jones2007}, we adopt ``event'' as the temporal category. Logistic regression analysis is performed with and without the ACF and DPS variables.  SpecificEvent and OtherEntity are significant predictors of the ``event'' category (p < 0.01), with a pseudo-$R^2$ of 0.669. Including the ACF of the true-relevant distribution is significant, with a minor improvement in model fit. The high pseudo-$R^2$ is unsurprising in this case, since the SpecificEvent code corresponds to the Novelty ``event'' category. It does, however, confirm our code definition.
-
-Dakka et al manually classified ``time-sensitive queries'' for TREC topics 301-450. As reported in Table \ref{table.regresults}, only the PlaceEntity code is a significant predictor of the manual classification. However, the pseudo-$R^2$ is very low (0.02).  Dakka et al acknowledge examining the relevant document distributions for LA Times and Financial Times sub collections.  Including the DPS of the true-relevant document distribution in Financial Times ($DPS_{FT}$) increases the pseudo-$R^2$ to 0.263, suggesting that the relevant document distribution played a significant role in the manual classification.
-
-Efron and Golovchinsky also classified topics 301-450, in this case focusing on the identification of ``recency'' queries. As reported in \ref{table.regresults}, both PlaceEntity and OtherEntity are useful predictors of the temporal response. As with Dakka, including $DPS_{FT}$ increases pseudo-$R^2$ from 0.181 to 0.377. This again suggests that the distribution of relevant documents played an important role in the determination of topic temporality.
-
-Finally, we look at Peetz et al's classification of the Blog06-08 topics 850-1050. In this case, the SpecificEvent, PeriodicEvent, Person and Organization entities are useful predictors of the temporal category (pseudo-$R^2$=0.127). Including DPS  improves model fit (pseudo-$R^2$=0.223), again suggesting that the distribution of relevant documents played a role in manual classification.
-
-\subsection{Relevant document distributions}
-
-In this section, we report the results of the manual classification of the temporal distribution of true-relevant documents for each collection.  All topics were coded by both coders into the four categories described in section X. The weighted Cohen's $\kappa$ is used for inter-coder reliability. AP=0.554, Blog06=0.857, Tweets=0.482  indicating moderate to high agreement.
-
-
-\section{Conclusions}
-
-In this study, we have tried to identify the factors or characteristics of information needs that can be used to predict manual classifications of temporal queries. We performed a qualitative analysis of over 660 topics used in temporal information retrieval research, identifying candidate predictors and performing a series of regression analyses to quantify our ability to explain previous manual classifications of topics. 
-
-We were successful in modeling the ``event'' category in the 2003-2004 Novelty test collection, primarily through the identification of specific events in the topic titles and descriptions. The resulting logistic regression model was able to explain 70\% of the variance in the event/opinion categorization.  In the three other collections created by Dakka, Efron, and Peetz respectively, our qualitative codes were able to explain 2\%, 18\%, and 13\% of the variation in manual temporal classification respectively.  Incorporating the temporal distribution of judged-relevant documents, this increases to 26\%, 38\%, and 22\% respectively. This indicates that the distribution of relevant documents plays a central role in the judgment of temporal sensitivity in these collections.
-
-While these results are promising, we were unable to identify characteristics of these topics that fully explain the manual classification decisions. If we cannot explain the process the determines the classifications, it raises questions about the value of these test collections for evaluation. Specifically, how can we be clear that the queries previously identified as ``temporally sensitive'' are indeed so? 
-
-(More needed)
-
-%ACKNOWLEDGMENTS are optional
-\section{Acknowledgments}
-This section is optional
-
-%
-% The following two commands are all you need in the
-% initial runs of your .tex file to
-% produce the bibliography for the citations in your paper.
-
-
-\bibliographystyle{abbrv}
-\bibliography{temporalir}  
-
-\section*{Appendix: Codebook}
 \begin{table*}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{| p{3cm} | p{6cm}  | p{6cm} |} \hline
@@ -338,8 +174,187 @@ Explicit Date & Apply this code to identify explicit dates. & 1988; June 15, 199
 \end{table*}
 
 
+An example of a coded topic from the 2004 Novelty test collection is presented in Figure \ref{fig.example}.  This topic refers to a specific event and contains place entities as well as an explicit date.  Topic N57 is categorized as an ``event'' by the TREC topic creator and is therefore an unambiguous temporal topic as defined by Jones and Diaz.
+
+\begin{figure}
+\begin{equation*}
+\small
+\begin{split}
+\mbox{\bf{Title}:} & \big[(\mbox{East Timor})_{PlaceEntity} \mbox{Independence}\big]_{SpecificEvent} \\
+\mbox{\bf{Description}:} & \big[  (\mbox{East Timor})_{PlaceEntity} \mbox{ vote for independence from } \\
+	& (\mbox{Indonesia})_{PlaceName} \mbox{ in } (\mbox{August 1999})_{ExplicitDate}\big]_{SpecificEvent}
+\end{split}
+\end{equation*}
+\caption{TREC Novelty 2004 topic N57 example annotation}
+\label{fig.example}
+\end{figure}
+
+In addition to coding the topics based on the defined codes, the coders assigned a temporal designation to the distribution of relevant documents for each topic. Non-parametric densities were fit to the temporal distribution of relevant documents for topics with more than 20 relevant documents. Each coder reviewed the relevant document distribution along with the total number of relevant documents for each topic and assigned one of four values:  too few observations (-1), low or no temporality (0), moderate temporality (1), and high temporality (2). These designations are included as features in the regression analysis and compared to the ACF and DPS values used as proxies of the relevant document distribution.
+ 
+After coding all 660 topics, the topic/code matrix was exported for subsequent reliability and regression analysis, as described in the following sections. 
+
+\subsection{Reliability analysis}
+
+For this study, coder agreement is measured using Cohen's $\kappa$ for the classification of the distribution of relevant documents. For the broader qualitative coding task, a variation of percent overlap, since coding is performed on arbitrary segments of text. We define the \emph{percent overlap} as:
+
+\[
+overlap = \frac{m}{m + u_1 + u_2} 
+\]
+
+Where $m$ is the number of excerpts assigned the same code by both coders, $u_1$ is the number of codes assigned to excerpts only by coder 1 and $u_2$ is the number of codes assigned to excerpts only by coder 2. If both coders assign no codes to a topic, this is considered perfect agreement. We report the macro overlap (calculated over all topics), the micro overlap (calculated as a per-topic average).  Per-code overlaps are used to characterize coder agreement within each code.
+
+\subsection{Relevant document distributions}
+
+In each of the four prior studies, the authors acknowledge using the distribution of judged-relevant or pseudo-relevant documents in determining topic temporality. For this study, we use two different measures to represent these distributions: the first-order time series autocorrelation (ACF) and the dominant power spectrum (DPS).
+
+Jones and Diaz \cite{Jones2007} use the ACF created by the temporal distribution of pseudo-relevant documents for a query as a predictor of query temporality. They note that queries with strong inter-day dependencies will have high ACF values, indicating predictability in the time series. The first-order autocorrelation of the time series is defined by Equation \ref{eq.acf}:
+
+\begin{equation}
+r_1 = \dfrac{\sum_{i=1}^{N-1} (x_t - \bar{x}_{(1)})(x_{t+1} - \bar{x}_{(2)})}{ \big [ \sum_{i=1}^{N-1}  (x_t - \bar{x}_{(1)})^2 \big ] ^{1/2} \big [\sum_{i=1}^{N-1} (x_{t+1} - \bar{x}_{(2)})^2 \big ]^{1/2}}
+\label{eq.acf}
+\end{equation}
+
+Similarly, He, Chang, and Lim \cite{He2007} use the DPS as a predictor of the ``burstiness'' of temporal features for event detection. The DPS is the highest power spectrum, estimated using the periodogram. The periodogram is the sequence of the squared magnitude of the Fourier coefficients $\Vert X_k \Vert^2$ indicating the signal power at frequency $k/T$ in the spectrum.  The discrete Fourier transform is defined by Equation \ref{eq.dps}:
+\begin{equation}
+X_k = \sum_{t=1}^T y_f(t)e^{\frac{2\pi i}{T}(k - 1)t}, t=1,2,....T
+\label{eq.dps}
+\end{equation}
+
+In this study, both ACF and DPS measures are used to reduce the distribution of judged-relevant or pseudo-relevant documents to a single value for the regression analysis, as described in the next section.
+
+\subsection{Regression analysis}
+
+A primary goal of this study is to determine the characteristics that contribute to the manual judgment of topic temporality. We use logistic regression based on the generalized linear model (GLM) implementation in R. The predictors are binary presence indicators for each of the qualitative codes along with theACF and DPS of the temporal distribution of true-relevant documents.  The response variables are the binary temporal/non-temporal indicators manually assigned in the four studies.  Model variables are selected using standard step-wise procedures based on the Akaike information criterion (AIC). Coefficients are reported using the log-odds and model fit is assessed using pseudo $R^2$.
+
+\section{Results}
+
+In this section we report the results of our analysis including a summary of the qualitative codes and their distributions, coder agreement/reliability, and regression models. We also report the results of the comparison of the manual assessment of the distribution of relevant documents as compared to the ACF and DPS values.
+
+\subsection{Codes}
+
+Our qualitative analysis suggests three broad classes: events, named entities, and explicit dates. A basic intuition is that topics focused on specific and important events will have a higher degree of temporal relevance. Following the TDT definition, seminal events happen at specific times in specific places, often to individuals or other named entities (e.g., organizations). Perhaps the most essential code is the ``SpecificEvent'' -- something important that happens at a particular time and place. Related to SpecificEvent is the ``PeriodicEvent,'' which refers to an event that recurs periodically, such as the Super Bowl, World Cup, or Olympics. Jones and Diaz \cite{Jones2007} note that many of the early ad-hoc queries were temporally ambiguous, referring to multiple events. We incorporate this concept through the ``GenericEvent'' code, which captures topics concerned with a class of specific events, such as earthquakes, elections, or strikes. While analyzing topics, it became apparent that some topics were likely to be inspired by a specific event, but the event is not referenced in the topic description. This concept is captured through the ``IndirectEventReference'' code. The remaining codes are concerned with the identification of specific types of named entities, which are expected to have some  association with topic temporality.
+
+
+\subsection{Code distributions}
+
+Figure \ref{fig.codedist} summarizes the percent of topics in each test collection with each code assigned. From these results, we can see that the Novelty and Microblog  collections have a higher percentage of specific events than the Blog and ad-hoc collections. The ad-hoc collections have a higher number of generic events, which supports the findings of Jones and Diaz \cite{Jones2007}. The Blog, Novelty, and Microblog test collections each have larger numbers of named entities in the topic titles and descriptions.
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+\includegraphics[width=6cm]{plots/topic-groups-ent.pdf}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+\includegraphics[width=6cm]{plots/topic-groups-evt.pdf}
+\end{subfigure}
+\begin{subfigure}{\textwidth}
+\includegraphics[width=11cm]{plots/coder-agreement.pdf}
+\end{subfigure}
+\caption{Percent of topics in each collection with codes assigned from the (a) entity code group and (b) events code group; (c) percent agreement by code.}
+\label{fig.codedist}
+\end{figure}
+
+\begin{comment}
+\begin{table*}
+\small
+\begin{tabular}{| l | l | l | l | l | l | l | l | l | l | l |} \hline
+Topics & ExpDate &	OrgEnt&	OtherEnt&	PersonEnt&	PlaceEnt&	FutureEvt&	GenericEvt&	IndEvtRef &	PerEvt&	SpecEvt \\ \hline
+301-450	&	0.01&	0.03&	0.11&	0.01&	0.20&	0.00&	0.21&	0.04&	0.01&	0.03 \\ \hline
+851-1050	&	0.02&	0.37&	0.31&	0.26&	0.14&	0.00&	0.01&	0.08&	0.18&	0.15 \\ \hline
+N1-N100	&	0.29&	0.18&	0.17&	0.28&	0.49&	0.00&	0.02&	0.05&	0.06&	0.56 \\ \hline
+MB1-110	&	0.02&	0.23&	0.14&	0.26&	0.21&	0.02&	0.05&	0.07&	0.12&	0.43 \\ \hline
+\end{tabular}
+\caption{Percent of topics with each code assigned by topic group}
+\label{table.codedist}
+\end{table*}
+\end{comment}
+
+
+\subsection{Reliability}
+
+To assess coding reliability, a total of 1244 codes were assigned to 330 topics by the two coders. The macro percent overlap is 0.71 and  micro percent overlap is 0.83. The per-code overlap is reported in Figure \ref{fig.codedist}(c). Higher overlap indicates greater agreement between coders. As expected, some codes have higher agreement than others. Specifically, personal names (0.94), locations (0.91), and explicit dates (0.89) have very high agreement whereas indirect event references (0.19) and generic events (0.45) have lower agreement.
 
 
 
+\subsection{Regression analysis}
+
+In this section, were report the results of the logistic regression analysis, predicting the manually assigned categories for each test collection. The resulting models are reported in Table \ref{table.regresults}. 
+
+\begin{table*}
+\small
+\centering
+\begin{tabular}{| l | l | l | l | l |} \hline
+\bf{Name} & \bf{Model}  & \bf{$R^2$} \\ \hline
+Novelty 	&  $-3.767 + 5.848 \cdot SpecEvt + 2.523 \cdot Other$& 0.669 \\ \hline
+Novelty (Rel)		&  $-3.539 + 7.006  \cdot SpecEvt + 2.530  \cdot Other - 7.343 \cdot ACF$  & 0.706 \\ \hline
+Dakka	&  $0.134 + 0.878 \cdot Place$   & 0.019 \\ \hline
+Dakka (Rel) 		& $-0.917 + 0.393 \cdot DPS^\blacktriangle$ & 0.263  \\ \hline
+Efron	& $-1.765 + 2.353*Place^\blacktriangle + 1.410 \cdot Other^\circ$  & 0.181 \\ \hline
+Efron (Rel) 		& $-2.727 + 1.965 \cdot Place^\blacktriangle + 1.787 \cdot Other^\vartriangle + 0.163 \cdot DPS^\blacktriangle$& 0.377 \\ \hline
+Peetz & $-0.336 + 1.682*SpecEvt^\circ + 0.982 \cdot PerEvt + 0.672 \cdot Person -0.6175 \cdot Org$ & 0.127 \\ \hline
+Peetz (Rel) 		& $-1.245 + 1.218 \cdot SpecEvt + 0.797 \cdot Period + 2.835 \cdot ACF^\circ  + 0.002 \cdot DPS$ & 0.223 \\ \hline
+\end{tabular}
+\caption{Logistic regression models for each test collection without and with (Rel) ACF/DPS predictors. Model fit reported based pseudo-$R^2$ after stepwise variable selection based on AIC. Variable significance indicated by $p < 0.05 (^\circ),  < 0.01 (^\vartriangle),  < 0.001 (^\blacktriangle)$ }
+\label{table.regresults}
+\end{table*}
+
+For the 2003-2004 Novelty collection, the response variable is the manually assigned ``opinion'' (0) or ``event'' (1) categories.  Following Jones and Diaz \cite{Jones2007}, we adopt ``event'' as the temporal category. Logistic regression analysis is performed with and without the ACF and DPS predictors.  SpecificEvent and OtherEntity are significant predictors of the ``event'' category ($p < 0.01$), with a pseudo-$R^2$ of 0.669. Including the ACF of the true-relevant distribution is significant, with a minor improvement in model fit. The high pseudo-$R^2$ is unsurprising in this case, since the SpecificEvent code corresponds to the Novelty ``event'' category. It does, however, confirm our code definition.
+
+Dakka et al manually classified ``time-sensitive queries'' for TREC topics 301-450. As reported in Table \ref{table.regresults}, only the PlaceEntity code is a significant predictor of the manual classification. However, the pseudo-$R^2$ is very low (0.019).  Dakka et al acknowledge examining the relevant document distributions for the Los Angeles Times and Financial Times sub collections.  Including the DPS of the true-relevant document distribution increases the pseudo-$R^2$ to 0.263, suggesting that the relevant document distribution played a significant role in the manual classification.
+
+Efron and Golovchinsky also classified topics 301-450, in this case focusing on the identification of ``recency'' queries. As reported in Table \ref{table.regresults}, both PlaceEntity and OtherEntity are useful predictors of the temporal response. As with Dakka, including the DPS of the true-relevant distribution increases pseudo-$R^2$ from 0.181 to 0.377. This again suggests that the distribution of relevant documents played an important role in the determination of topic temporality.
+
+Finally, we look at Peetz et al's classification of the Blog06-08 topics 850-1050. In this case, the SpecificEvent, PeriodicEvent, Person and Organization entities are useful predictors of the temporal category (pseudo-$R^2$=0.127). Including DPS  improves model fit (pseudo-$R^2$=0.223), again suggesting that the distribution of relevant documents played a role in manual classification.
+
+\subsection{Relevant document distributions}
+
+As described in section 3.1, non-parametric densities based on the temporal distribution of true-relevant documents are manually classified by two coders into four categories.  The weighted Cohen's $\kappa$ is calculated to assess agreement between the two coders.  Average Pearson's correlation ($\rho$) measures the correlation between these manual classifications and the per-topic ACF/DPS values.  The goal here is to determine if ACF or DPS are reasonable approximates of human judgment of the ``temporality'' of results distributions. The results reported in Table \ref{table.cor} indicate moderate (0.40-0.60) to high (0.60-0.80) agreement between coders and higher correlation between the ACF and the manual classifications.
+
+\begin{table*}
+\small
+\center
+\begin{tabular}{| l | l | l | l | } \hline
+\bf{Collection} & \bf{$\kappa$}  & \bf{$\rho_{ACF}$} & \bf{$\rho_{DPS}$} \\ \hline
+AP 	   & 0.743 & 0.518 & 0.356 \\ \hline
+LA/FT & 0.551 & 0.591 & 0.374 \\ \hline
+Blog    & 0.857 & 0.728 & 0.498 \\ \hline
+MB      & 0.806 & 0.692 & 0.354 \\ \hline 
+\end{tabular}
+\caption{Cohen's $\kappa$ for inter-coder agreement for classification of true-relevant document distributions. Pearson's $\rho$ measuring correlation (average) between manual classifications and ACF/DPS values}
+\label{table.cor}
+\end{table*}
+
+
+\section{Discussion and conclusions}
+
+In this study, we have tried to identify potential factors or characteristics of TREC topics that can be used to predict manual classifications of ``temporal sensitivity.'' Other researchers have classified topics without clear definitions or criteria. We have attempted to model these classifications by proposing features believed to indicate temporality.  Features include the presence of different types of named entities, classes of events, and measures of the temporal distribution of judged relevant documents.
+
+We were successful in modeling the ``event'' and ``opinion'' categories in the TREC Novelty track, based primarily on the presence of our ``SpecificEvent'' code in the analyzed topics.  Event codes were also found to be useful predictors of the classification of Peetz et al. In all cases, the distribution of relevant documents, represented by ACF or DPS, was consistently a significant predictor of topic temporality. 
+
+While these results are promising, we were unable to identify characteristics of these topics that fully explain the manual classification decisions. If we cannot explain the process that determines the classifications, it raises questions about the value of these test collections for evaluation. Specifically, how can we be clear that the queries previously identified as ``temporally sensitive'' are truly so? 
+
+\begin{figure}
+\includegraphics[width=11cm]{images/301.png}
+\caption{Temporal distribution of relevant documents for topic 301 in TREC8} 
+\label{fig.301}
+\end{figure}
+
+We propose a few principles to guide future work on the evaluation of temporal retrieval models.
+
+Aside from the Novelty track topics, the other manual classifications consistently conflate two different concepts: the temporal distribution of judged-relevant documents and a common-sense notion of topic temporality. The temporal distribution of judged-relevant documents is an important indicator of possible temporality, particularly as models often rely on pseudo-relevant document distributions in scoring. However, these distributions alone are not adequate, which is why common-sense criteria have been introduced to determine whether topics have ``bona-fide temporal dimensions.'' We recommend considering these two concepts separately.  Since the first-order autocorrelation of the judged-relevant document distribution is highly correlated with manual judgements of temporality, we recommend using the ACF or other measure of distribution ``burstiness'' or ``peakedness'' instead of manual assessment.  
+
+Common-sense notions of temporality should be clearly explicated.  We found that the presence of different classes of events, as captured in the qualitative codes, would seem to be strong indicators of topic temporality.  This is the case in the Novelty and Blog classifications. As suggested in Figure \ref{fig.codedist}(c), topics 301-450 have fewer specific events, similar to the findings of Jones \& Diaz with the AP and WSJ collections. This suggests that the earlier TREC test collections, including TREC8, may not be well-suited to temporal retrieval research because of the nature of the topics. These collections are also problematic because of different temporal characteristics of individual sub-collections.
+
+Subcollections should be considered independently. Each sub-collection has different temporal dimensions (start/end dates), topical coverage, and document volumes. By combining sub-collections for temporal analysis, researchers risk falsely identifying temporally-sensitive queries. An example is given in Figure \ref{fig.301} which breaks down the distribution of relevant documents by sub-collection in TREC8 for query 301 (international organized crime). This query was used as an exemplar of recency queries in Li \& Croft. Looking at the distribution across all of TREC8, this does appear to be a recency query, since more relevant documents are found toward the end of the collection. However, breaking down the distribution by sub-collection, we see that this is due to a high number of judged relevant documents in FBIS.  In fact, many of the recency queries in Li \& Croft have large numbers of relevant documents in the FBIS sub-collection.    This leads us to recommend that individual sub-collections should be considered independently.
+
+This is problematic for the LA Times and Financial Times sub-collections, which have surprisingly few judged-relevant documents. The LA Times has an average of 24 and Financial Times 33 judged-relevant documents.  Using the criteria of $>20$ judged-relevant document per topic for the assessment of temporality, only 53 and 70 topics respectively would be available for analysis. This again suggests that the TREC8 sub-collections are not well-suited to temporal retrieval research.
+	
+\section{Acknowledgments}
+This work was supported in part by the US National Science Foundation under Grant Nos. XXX. Any opinions, findings, conclusions, or recommendations expressed are those of the authors and do not necessarily reflect the views of the National Science Foundation. 
+
+\bibliographystyle{abbrv}
+\bibliography{temporalir}  
 
 \end{document}

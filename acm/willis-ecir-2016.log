@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.6.22)  30 SEP 2015 15:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.6.22)  30 SEP 2015 15:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -362,4 +362,245 @@ LaTeX Warning: Citation `Kanhabua2011' on page \thepage  undefined on input lin
 e 40.
 
 
-LaTeX Warning: Citation `Mizzaro1997' on page \thepage  undefined on 
+LaTeX Warning: Citation `Mizzaro1997' on page \thepage  undefined on input line
+ 42.
+
+
+LaTeX Warning: Citation `Shokouhi2011' on page \thepage  undefined on input lin
+e 42.
+
+
+LaTeX Warning: Citation `Vlachos2005' on page \thepage  undefined on input line
+ 42.
+
+
+LaTeX Warning: Citation `Parikh2008' on page \thepage  undefined on input line 
+42.
+
+
+LaTeX Warning: Citation `Lavrenko2000' on page \thepage  undefined on input lin
+e 42.
+
+
+LaTeX Warning: Citation `Kulkarni2011' on page \thepage  undefined on input lin
+e 42.
+
+[1{/usr/local/texlive/2014basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+
+LaTeX Warning: Citation `Li2003' on page \thepage  undefined on input line 48.
+
+
+LaTeX Warning: Reference `figure.licroft' on page \thepage  undefined on input 
+line 50.
+
+
+LaTeX Warning: File `images/301.png' not found on input line 53.
+
+
+./willis-ecir-2016.tex:53: Package pdftex.def Error: File `images/301.png' not 
+found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 \includegraphics[width=8cm]{images/301.png}
+                                                
+? 
+LaTeX Font Info:    Try loading font information for T1+aett on input line 53.
+(/usr/local/texlive/2014basic/texmf-dist/tex/latex/ae/t1aett.fd
+File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
+)
+
+LaTeX Warning: Citation `Jones2007' on page \thepage  undefined on input line 5
+9.
+
+
+LaTeX Warning: Citation `Dakka2012' on page \thepage  undefined on input line 6
+5.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+Overfull \hbox (6.44202pt too wide) in paragraph at lines 67--68
+\T1/aer/m/n/9 news col-lec-tions where the cen-tral con-cept of a ``time-sensit
+ive''
+ []
+
+
+LaTeX Warning: Citation `Efron2011' on page \thepage  undefined on input line 7
+0.
+
+
+LaTeX Warning: Citation `Peetz2013' on page \thepage  undefined on input line 7
+6.
+
+
+Overfull \hbox (7.33963pt too wide) in paragraph at lines 96--96
+[]\secfnt WHAT MAKES A QUERY TEM-PO-RALLY
+ []
+
+[3]
+
+LaTeX Warning: Citation `Krippendorf1980' on page \thepage  undefined on input 
+line 121.
+
+
+LaTeX Warning: Reference `table.topics' on page \thepage  undefined on input li
+ne 121.
+
+
+LaTeX Warning: Reference `table.codebook' on page \thepage  undefined on input 
+line 137.
+
+
+LaTeX Warning: Citation `Jones2007' on page \thepage  undefined on input line 1
+52.
+
+
+LaTeX Warning: Citation `He2007' on page \thepage  undefined on input line 154.
+
+
+
+LaTeX Warning: Citation `XXX' on page \thepage  undefined on input line 163.
+
+
+LaTeX Warning: Citation `Efron2014' on page \thepage  undefined on input line 1
+63.
+
+[4]
+
+LaTeX Warning: Citation `Jones2007' on page \thepage  undefined on input line 1
+71.
+
+
+Overfull \hbox (8.46692pt too wide) in paragraph at lines 171--172
+[]\T1/aer/m/n/9 Our qual-i-ta-tive anal-y-sis sug-gests three broad classes: ev
+ents,
+ []
+
+
+LaTeX Warning: Reference `table.codedist' on page \thepage  undefined on input 
+line 176.
+
+
+LaTeX Warning: Citation `Jones2007' on page \thepage  undefined on input line 1
+76.
+
+
+LaTeX Warning: Reference `table.overlap' on page \thepage  undefined on input l
+ine 194.
+
+
+./willis-ecir-2016.tex:196: LaTeX Error: Environment ignore undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.196 \begin{ignore}
+                    
+? 
+
+./willis-ecir-2016.tex:214: LaTeX Error: \begin{document} ended by \end{ignore}
+.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.214 \end{ignore}
+                  
+? 
+
+LaTeX Warning: Reference `table.regresults' on page \thepage  undefined on inpu
+t line 218.
+
+
+LaTeX Warning: Citation `Jones2007' on page \thepage  undefined on input line 2
+76.
+
+
+LaTeX Warning: Reference `table.regresults' on page \thepage  undefined on inpu
+t line 276.
+
+
+LaTeX Warning: Reference `table.regresults' on page \thepage  undefined on inpu
+t line 280.
+
+
+Overfull \hbox (5.10152pt too wide) in paragraph at lines 280--281
+[]\T1/aer/m/n/9 Dakka et al pro-vided man-ual clas-si-fi-ca-tion of ``time-sens
+itive
+ []
+
+
+LaTeX Warning: Reference `table.regresults' on page \thepage  undefined on inpu
+t line 284.
+
+
+LaTeX Warning: Citation `XXX' on page \thepage  undefined on input line 291.
+
+
+LaTeX Warning: Citation `Efron2014' on page \thepage  undefined on input line 2
+91.
+
+[5]
+
+LaTeX Warning: Citation `Amodeo2011' on page \thepage  undefined on input line 
+295.
+
+(./willis-ecir-2016.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6])
+Overfull \hbox (13.10486pt too wide) in paragraph at lines 321--334
+[][] 
+ []
+
+[7
+
+] [8] (./willis-ecir-2016.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2862 strings out of 494522
+ 36736 string characters out of 6167205
+ 111660 words of memory out of 5000000
+ 6031 multiletter control sequences out of 15000+600000
+ 57944 words of font info for 86 fonts, out of 8000000 for 9000
+ 319 hyphenation exceptions out of 8191
+ 41i,9n,28p,1644b,265s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014basic/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/lo
+cal/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr
+/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
+usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.
+pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+ib10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr6.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr8.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr9.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy6.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmti9.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/ur
+w/helvetic/uhvb8a.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/
+times/utmb8a.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times
+/utmr8a.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmr
+i8a.pfb>
+Output written on willis-ecir-2016.pdf (8 pages, 234134 bytes).
+PDF statistics:
+ 92 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

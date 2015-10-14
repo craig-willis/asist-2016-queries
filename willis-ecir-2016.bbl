@@ -1,11 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{Amodeo2011}
-G.~Amodeo, G.~Amati, and G.~Gambosi.
-\newblock {On relevance, time and query expansion}.
-\newblock {\em Proceedings of the 20th ACM international conference on
-  Information and knowledge management - CIKM '11}, page 1973, 2011.
-
 \bibitem{Barry1998}
 C.~Barry and L.~Schamber.
 \newblock {Users' criteria for relevance evaluation: A cross-situational
@@ -36,6 +30,13 @@ M.~Efron, J.~Lin, J.~He, and A.~D. Vries.
   Estimation}.
 \newblock {\em umiacs.umd.edu}, pages 33--42, 2014.
 
+\bibitem{He2007}
+Q.~He, K.~Chang, and E.-P. Lim.
+\newblock {Analyzing feature trajectories for event detection}.
+\newblock {\em Proceedings of the 30th annual international ACM SIGIR
+  conference on Research and development in information retrieval - SIGIR '07},
+  page 207, 2007.
+
 \bibitem{Jones2007}
 R.~Jones and F.~Diaz.
 \newblock {Temporal profiles of queries}, July 2007.
@@ -46,16 +47,10 @@ N.~Kanhabua and K.~N\o~rv\aa g.
 \newblock {\em Proceedings of the 34th international ACM SIGIR conference on
   Research and development in Information - SIGIR '11}, page 1257, 2011.
 
-\bibitem{Kulkarni2011}
-A.~Kulkarni, J.~Teevan, K.~M. Svore, and S.~T. Dumais.
-\newblock {Understanding temporal query dynamics}.
-\newblock {\em Proceedings of the fourth ACM international conference on Web
-  search and data mining - WSDM '11}, page 167, 2011.
-
-\bibitem{Lavrenko2000}
-V.~Lavrenko, M.~Schmill, and D.~Lawrie.
-\newblock {Mining of concurrent text and time series}.
-\newblock {\em \ldots on Text Mining}, pages 2--9, 2000.
+\bibitem{Krippendorff1980}
+K.~Krippendorff.
+\newblock {\em {Content analysis: an introduction to its methodology}}.
+\newblock Sage, Beverly Hills, CA, 1980.
 
 \bibitem{Li2003}
 X.~Li and W.~B. Croft.
@@ -70,27 +65,9 @@ D.~Metzler, R.~Jones, F.~Peng, and R.~Zhang.
   Research and development in information retrieval - SIGIR '09}, (1):700,
   2009.
 
-\bibitem{Mizzaro1997}
-S.~Mizzaro.
-\newblock {Relevance: The whole history}.
-\newblock {\em Journal of the American Society for Information Science},
-  48(9):810--832, 1997.
-
-\bibitem{Parikh2008}
-N.~Parikh and N.~Sundaresan.
-\newblock {Scalable and near real-time burst detection from eCommerce queries}.
-\newblock {\em Proceeding of the 14th ACM SIGKDD international conference on
-  Knowledge discovery and data mining - KDD 08}, page 972, 2008.
-
 \bibitem{Peetz2013}
 M.~Peetz and M.~D. Rijke.
 \newblock {Cognitive temporal document priors}.
 \newblock {\em Advances in Information Retrieval}, 2013.
-
-\bibitem{Shokouhi2011}
-M.~Shokouhi.
-\newblock {Detecting Seasonal Queries by Time-Series Analysis Categories and
-  Subject Descriptors}.
-\newblock In {\em SIGIR 11}, pages 1171--1172, 2011.
 
 \end{thebibliography}
