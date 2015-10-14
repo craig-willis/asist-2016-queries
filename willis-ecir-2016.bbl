@@ -24,12 +24,6 @@ M.~Efron and G.~Golovchinsky.
 \newblock {\em Proceedings of the 34th international ACM SIGIR conference on
   Research and development in Information - SIGIR '11}, page 495, 2011.
 
-\bibitem{Efron2014}
-M.~Efron, J.~Lin, J.~He, and A.~D. Vries.
-\newblock {Temporal Feedback for Tweet Search with Non-Parametric Density
-  Estimation}.
-\newblock {\em umiacs.umd.edu}, pages 33--42, 2014.
-
 \bibitem{He2007}
 Q.~He, K.~Chang, and E.-P. Lim.
 \newblock {Analyzing feature trajectories for event detection}.
@@ -65,9 +59,9 @@ D.~Metzler, R.~Jones, F.~Peng, and R.~Zhang.
   Research and development in information retrieval - SIGIR '09}, (1):700,
   2009.
 
-\bibitem{Peetz2013}
-M.~Peetz and M.~D. Rijke.
-\newblock {Cognitive temporal document priors}.
-\newblock {\em Advances in Information Retrieval}, 2013.
+\bibitem{Peetz2013a}
+M.-H. Peetz, E.~Meij, and M.~Rijke.
+\newblock {Using temporal bursts for query modeling}.
+\newblock {\em Information Retrieval}, 17(1):74--108, July 2013.
 
 \end{thebibliography}
