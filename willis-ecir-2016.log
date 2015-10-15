@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.4)  14 OCT 2015 22:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.4)  15 OCT 2015 14:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -239,9 +239,6 @@ Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 \verbatim@line=\toks26
 \verbatim@in@stream=\read1
 )
-(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
-
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
@@ -268,28 +265,29 @@ tionskip \sbox \@tempboxa {{\bfseries #1.} #2}\ifdim \wd \@tempboxa >\hsize {\b
 fseries #1.} #2\par \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@
 tempboxa \hfil }\fi \vskip \belowcaptionskip .
 \c@ContinuedFloat=\count129
-)
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 \c@subfigure=\count130
 \c@subtable=\count131
-) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
-(./willis-ecir-2016.aux)
+) (./willis-ecir-2016.aux)
 \openout1 = `willis-ecir-2016.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -366,11 +364,11 @@ Package caption Warning: Forced redefinition of \caption since the
 See the caption package documentation for explanation.
 
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 73.
+LaTeX Font Info:    Try loading font information for U+msa on input line 74.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 73.
+LaTeX Font Info:    Try loading font information for U+msb on input line 74.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -378,160 +376,163 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-Underfull \hbox (badness 4048) in paragraph at lines 164--164
+Underfull \hbox (badness 4048) in paragraph at lines 165--165
 \OT1/cmr/m/n/9 on June 15, 1991; 2008
  []
 
 
-Underfull \hbox (badness 7273) in paragraph at lines 164--164
+Underfull \hbox (badness 7273) in paragraph at lines 165--165
 \OT1/cmr/m/n/9 tions, elec-tions, dis-putes,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--164
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
 []\OT1/cmr/m/n/9 Indirect
  []
 
 
-Underfull \hbox (badness 5161) in paragraph at lines 164--164
+Underfull \hbox (badness 5161) in paragraph at lines 165--165
 \OT1/cmr/m/n/9 Event Ref-er-
  []
 
 
-Underfull \hbox (badness 2126) in paragraph at lines 164--164
+Underfull \hbox (badness 2126) in paragraph at lines 165--165
 \OT1/cmr/m/n/9 versy. Par-tial birth abor-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--164
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
 []\OT1/cmr/m/n/9 Periodic
  []
 
 
-Underfull \hbox (badness 3758) in paragraph at lines 164--164
+Underfull \hbox (badness 3758) in paragraph at lines 165--165
 []\OT1/cmr/m/n/9 2020 Fifa, 2016 Sum-mer
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--164
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
 []\OT1/cmr/m/n/9 Organization
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--164
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
 []\OT1/cmr/m/n/9 Hubble Tele-scope; The
  []
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 174.
+LaTeX Font Warning: Command \small invalid in math mode on input line 175.
 
-[4] [5] [6] [7] <plots/topic-groups-ent.pdf, id=43, 505.89pt x 505.89pt>
+[4]
+Underfull \vbox (badness 6910) has occurred while \output is active []
+
+ [5]
+[6] <plots/topic-groups-ent.pdf, id=39, 505.89pt x 505.89pt>
 File: plots/topic-groups-ent.pdf Graphic file (type pdf)
 
 <use plots/topic-groups-ent.pdf>
-Package pdftex.def Info: plots/topic-groups-ent.pdf used on input line 239.
+Package pdftex.def Info: plots/topic-groups-ent.pdf used on input line 242.
 (pdftex.def)             Requested size: 170.71892pt x 113.80489pt.
 
-<plots/topic-groups-evt.pdf, id=44, 505.89pt x 505.89pt>
+<plots/topic-groups-evt.pdf, id=40, 505.89pt x 505.89pt>
 File: plots/topic-groups-evt.pdf Graphic file (type pdf)
 
 <use plots/topic-groups-evt.pdf>
-Package pdftex.def Info: plots/topic-groups-evt.pdf used on input line 243.
+Package pdftex.def Info: plots/topic-groups-evt.pdf used on input line 246.
 (pdftex.def)             Requested size: 170.71892pt x 113.80489pt.
 
-<plots/coder-agreement.pdf, id=45, 433.62pt x 144.54pt>
+<plots/coder-agreement.pdf, id=41, 433.62pt x 144.54pt>
 File: plots/coder-agreement.pdf Graphic file (type pdf)
 
 <use plots/coder-agreement.pdf>
-Package pdftex.def Info: plots/coder-agreement.pdf used on input line 246.
+Package pdftex.def Info: plots/coder-agreement.pdf used on input line 249.
 (pdftex.def)             Requested size: 312.9803pt x 104.33116pt.
- [8 <./plots/topic-groups-ent.pdf> <./plots/topic-groups-evt.pdf> <./plots/code
-r-agreement.pdf>] [9] [10]
-<analysis/301/301-trec8.pdf, id=76, 505.89pt x 505.89pt>
+ [7] [8 <./plots/topic-groups-ent.pdf> <./plots/topic-groups-evt.pdf> <./plots/
+coder-agreement.pdf>] [9]
+<analysis/301/301-trec8.pdf, id=73, 505.89pt x 505.89pt>
 File: analysis/301/301-trec8.pdf Graphic file (type pdf)
 
 <use analysis/301/301-trec8.pdf>
-Package pdftex.def Info: analysis/301/301-trec8.pdf used on input line 334.
+Package pdftex.def Info: analysis/301/301-trec8.pdf used on input line 337.
 (pdftex.def)             Requested size: 85.35826pt x 85.35173pt.
 
-Overfull \hbox (13.08827pt too wide) in paragraph at lines 334--335
+Overfull \hbox (13.08827pt too wide) in paragraph at lines 337--338
 [][] 
  []
 
-<analysis/301/301-la.pdf, id=77, 505.89pt x 505.89pt>
+<analysis/301/301-la.pdf, id=74, 505.89pt x 505.89pt>
 File: analysis/301/301-la.pdf Graphic file (type pdf)
 
 <use analysis/301/301-la.pdf>
-Package pdftex.def Info: analysis/301/301-la.pdf used on input line 338.
+Package pdftex.def Info: analysis/301/301-la.pdf used on input line 341.
 (pdftex.def)             Requested size: 85.35826pt x 85.35173pt.
 
-Overfull \hbox (13.08827pt too wide) in paragraph at lines 338--339
+Overfull \hbox (13.08827pt too wide) in paragraph at lines 341--342
 [][] 
  []
 
-<analysis/301/301-ft.pdf, id=78, 505.89pt x 505.89pt>
+<analysis/301/301-ft.pdf, id=75, 505.89pt x 505.89pt>
 File: analysis/301/301-ft.pdf Graphic file (type pdf)
 
 <use analysis/301/301-ft.pdf>
-Package pdftex.def Info: analysis/301/301-ft.pdf used on input line 342.
+Package pdftex.def Info: analysis/301/301-ft.pdf used on input line 345.
 (pdftex.def)             Requested size: 85.35826pt x 85.35173pt.
 
-Overfull \hbox (13.08827pt too wide) in paragraph at lines 342--343
+Overfull \hbox (13.08827pt too wide) in paragraph at lines 345--346
 [][] 
  []
 
-<analysis/301/301-fbis.pdf, id=79, 505.89pt x 505.89pt>
+<analysis/301/301-fbis.pdf, id=76, 505.89pt x 505.89pt>
 File: analysis/301/301-fbis.pdf Graphic file (type pdf)
 
 <use analysis/301/301-fbis.pdf>
-Package pdftex.def Info: analysis/301/301-fbis.pdf used on input line 346.
+Package pdftex.def Info: analysis/301/301-fbis.pdf used on input line 349.
 (pdftex.def)             Requested size: 85.35826pt x 85.35173pt.
 
-Overfull \hbox (13.08827pt too wide) in paragraph at lines 346--347
+Overfull \hbox (13.08827pt too wide) in paragraph at lines 349--350
 [][] 
  []
 
-[11 <./analysis/301/301-trec8.pdf> <./analysis/301/301-la.pdf> <./analysis/301/
-301-ft.pdf> <./analysis/301/301-fbis.pdf>] (./willis-ecir-2016.bbl [12])
-[13] (./willis-ecir-2016.aux)
+[10 <./analysis/301/301-trec8.pdf> <./analysis/301/301-la.pdf> <./analysis/301/
+301-ft.pdf> <./analysis/301/301-fbis.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ [11]
+(./willis-ecir-2016.bbl) [12] (./willis-ecir-2016.aux) ) 
 Here is how much of TeX's memory you used:
- 4039 strings out of 495028
- 58330 string characters out of 6181498
- 135746 words of memory out of 5000000
+ 4038 strings out of 495028
+ 58320 string characters out of 6181498
+ 134746 words of memory out of 5000000
  7181 multiletter control sequences out of 15000+600000
  11125 words of font info for 43 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,20n,40p,1438b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
-/msam7.pfb>
-Output written on willis-ecir-2016.pdf (13 pages, 328370 bytes).
+ 38i,20n,38p,1476b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
+Output written on willis-ecir-2016.pdf (12 pages, 327508 bytes).
 PDF statistics:
- 184 PDF objects out of 1000 (max. 8388607)
- 130 compressed objects within 2 object streams
+ 180 PDF objects out of 1000 (max. 8388607)
+ 127 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
