@@ -27,9 +27,7 @@
 \captionsetup{compatibility=false}
 
 \usepackage{url}
-\urldef{\mailsa}\path|{alfred.hofmann, ursula.barth, ingrid.haas, frank.holzwarth,|
-\urldef{\mailsb}\path|anna.kramer, leonie.kunz, christine.reiss, nicole.sator,|
-\urldef{\mailsc}\path|erika.siebert-cole, peter.strasser, lncs}@springer.com|    
+\urldef{\mails}\path|{willis8, gsherma2, mefron}@illinois.edu|
 \newcommand{\keywords}[1]{\par\addvspace\baselineskip
 \noindent\keywordname\enspace\ignorespaces#1}
 
@@ -52,22 +50,16 @@
 % the running heads and the author index.
 %
 
-%\author{Alfred Hofmann
-%\and Ursula Barth\and Ingrid Haas\and Frank Holzwarth\and\\
-%Anna Kramer\and Leonie Kunz\and Christine Rei\ss\and\\
-%Nicole Sator\and Erika Siebert-Cole\and Peter Stra\ss er}
-%
+\author{Craig Willis \and Garrick Sherman \and Miles Efron}
+
 \authorrunning{}
 % (feature abused for this document to repeat the title also on left hand pages)
 
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
-%\institute{Springer-Verlag, Computer Science Editorial,\\
-%Tiergartenstr. 17, 69121 Heidelberg, Germany\\
-%\mailsa\\
-%\mailsb\\
-%\mailsc\\
-%\url{http://www.springer.com/lncs}}
+\institute{University of Illinois at Urbana-Champaign \\
+501 E. Daniel St., Champaign, IL 61820 \\
+\mails}
 
 %
 % NB: a more complex sample for affiliations and the mapping to the
@@ -82,18 +74,19 @@
 
 
 \begin{abstract}
-\keywords{We would like to encourage you to list your keywords within
-the abstract section}
+
+This work takes an in-depth look at the factors that affect manual classifications of ``temporally sensitive'' information needs. We use qualitative and quantitative techniques to analyze 660 topics from the Text Retrieval Conference (TREC) previously used in the experimental evaluation of temporal retrieval models.  Regression analysis is used to model previous manual classifications. We identify factors and potential problems with previous classifications, proposing principles and guidelines for future work on temporal retrieval models.
+
 \end{abstract}
 
 
 \section{Introduction}
 
-A basic intuition in temporal information retrieval research is that time should be modeled explicitly when scoring and ranking documents with respect to users' queries. Time-related criteria such as recency, currency, and freshness have long been recognized as factors in studies of relevance \cite{Barry1998}. Based on these criteria, information retrieval researchers have explored a variety of temporal retrieval models that explicitly incorporate time into the document ranking \cite{Li2003,Efron2011,Dakka2012}. Researchers often refer to general classes of ``temporal queries'' or ``temporal information needs.''  Models have been proposed and evaluated for ``recency queries'' \cite{Li2003,Efron2011}, ``time-sensitive queries'' \cite{Dakka2012}, ``implicitly temporal queries'' \cite{Metzler2009}, and ``temporally biased queries'' \cite{Jones2007}.  For evaluation,  studies rely on the manual classifications of topics into temporal categories.
+A basic intuition in temporal information retrieval research is that time should be modeled explicitly when scoring and ranking documents with respect to users' queries. Time-related criteria such as recency, currency, and freshness have long been recognized as factors in studies of relevance \cite{Barry1998}. Based on these criteria, researchers have explored a variety of temporal retrieval models that explicitly incorporate time into the document ranking \cite{Li2003,Efron2011,Dakka2012}. Researchers often refer to general classes of ``temporal queries'' or ``temporal information needs.''  Models have been proposed and evaluated for ``recency queries'' \cite{Li2003,Efron2011}, ``time-sensitive queries'' \cite{Dakka2012}, ``implicitly temporal queries'' \cite{Metzler2009}, and ``temporally biased queries'' \cite{Jones2007}.  For evaluation,  these studies rely on the manual classifications of topics into temporal categories.
 
-In this paper, we take a deeper look into these manually classified topics to develop a clearer understanding of \emph{what makes a query temporally sensitive}? Many researchers have relied on manually classified topics. However, manual classifications often conflate the temporal distribution of judged-relevant documents with common-sense notions of temporality without a clear explanation of the criteria or processes used in classification. As such, using these manually classified topics for evaluation is of limited value, since the processes being modeled is unclear. 
+In this paper, we take a deeper look into these manually classified topics to develop a clearer understanding of \emph{what makes a query temporally sensitive}?  Previous manual classifications combine the temporal distribution of judged-relevant documents with common-sense notions of topic temporality without a clear explanation of the criteria or processes used in classification. As such, using these manually classified topics for evaluation is of limited value, since the processes being modeled are unclear. 
 
-To address this question, we analyze  660 topics from the Text Retrieval Conference (TREC) previously used in the experimental evaluation of temporal retrieval models. We employ qualitative techniques to identify characteristics of topics that might affect the manual assessment of ``temporal-sensitivity.'' The resulting coded topics are used in a set of regression analyses to determine the specific relationships between these characteristics and manually assigned categories. 
+To address this question, we analyze  660 topics from the Text Retrieval Conference (TREC) previously used in the experimental evaluation of temporal retrieval models. We employ qualitative and quantitative techniques to identify characteristics of topics that might affect the manual assessment of ``temporal-sensitivity.'' The resulting coded topics are used in a set of regression analyses to determine the specific relationships between these characteristics and manually assigned categories. 
 
 This paper is structured as follows: Section 2 presents background information for this study. Section 3 describes the qualitative coding and analysis methods followed by the results in Section 4. Section 5 includes a discussion of the results and conclusions.
 
@@ -117,7 +110,7 @@ In this section, we review examples of studies focused on \emph{temporal relevan
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{| p{2cm} | p{6cm}  | p{6cm} |} \hline
 \bf{Topics} & \bf{Collections} & \bf{Studies}\\ \hline
-51-200 & TREC Disks 1-2 AP (1988-89) \newline WSJ (1987-92) & Jones \& Diaz (2007) \\ \hline
+51-200 & TREC Disks 1-2 AP (1988-89) & Jones \& Diaz (2007) \\ \hline
 301-450 &  TREC Disks 4-5 FT (1991-94) \newline LA Times (1988-89) & Efron \& Golovchinsky (2011); \newline  Dakka, Gravano \& Ipeirotis (2012) \\ \hline
 N1-100 & AQUAINT Xinhua (1996-2000)\newline NYT (1999-2000) & Jones \& Diaz (2007) \\ \hline
 851-1050 & Blog06  (Dec 6, 2005 - Feb 21, 2006) & Peetz, Meij \& de Rijke (2013) \\ \hline
@@ -154,7 +147,7 @@ We use content analysis \cite{Krippendorff1980} to identify characteristics of T
 
 Two of the authors participated in the development of the codebook and subsequent coding of topics. Codebook development began with a preliminary reading of all topic titles, descriptions and narratives. Codes were defined based on characteristics of topics expected to be related to temporal sensitivity, informed by the literature. Of the 660 topics, 330 were coded by both coders. During this process, code definitions were refined and clarified. In the final coding, only topic title and description were used. The final codebook is presented in Table \ref{table.codebook} in the appendix. Coding was completed using the Dedoose\footnote{http://www.dedoose.com} service.  
 
-\begin{table*}
+\begin{table}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{| p{3cm} | p{6cm}  | p{6cm} |} \hline
 \bf{Code} & \bf{Description} & \bf{Examples}  \\ \hline
@@ -171,7 +164,7 @@ Explicit Date & Apply this code to identify explicit dates. & 1988; June 15, 199
 \end{tabular}}
 \caption{Codebook}
 \label{table.codebook}
-\end{table*}
+\end{table}
 
 
 An example of a coded topic from the 2004 Novelty test collection is presented in Figure \ref{fig.example}.  This topic refers to a specific event and contains place entities as well as an explicit date.  Topic N57 is categorized as an ``event'' by the TREC topic creator and is therefore an unambiguous temporal topic as defined by Jones and Diaz.
@@ -243,15 +236,15 @@ Figure \ref{fig.codedist} summarizes the percent of topics in each test collecti
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
-\includegraphics[width=6cm]{plots/topic-groups-ent.pdf}
+\includegraphics[width=6cm, height=4cm]{plots/topic-groups-ent.pdf}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
   \centering
-\includegraphics[width=6cm]{plots/topic-groups-evt.pdf}
+\includegraphics[width=6cm, height=4cm]{plots/topic-groups-evt.pdf}
 \end{subfigure}
 \begin{subfigure}{\textwidth}
 \includegraphics[width=11cm]{plots/coder-agreement.pdf}
-\end{subfigure}
+\end{subfigure}x
 \caption{Percent of topics in each collection with codes assigned from the (a) entity code group and (b) events code group; (c) percent agreement by code.}
 \label{fig.codedist}
 \end{figure}
@@ -309,11 +302,10 @@ Finally, we look at Peetz et al's classification of the Blog06-08 topics 850-105
 
 \subsection{Relevant document distributions}
 
-As described in Section 3.1, non-parametric densities based on the temporal distribution of true-relevant documents are manually classified by two coders into four categories.  The weighted Cohen's $\kappa$ is calculated to assess agreement between the two coders.  Average Pearson's correlation ($\rho$) measures the correlation between these manual classifications and the per-topic ACF/DPS values.  The results reported in Table \ref{table.cor} indicate moderate (0.40-0.60) to high (0.60-0.80) agreement between coders and higher correlation between the ACF and the manual classifications. These findings show that ACF and DPS do a good job representing the degree to which relevant documents are temporally constrained. 
+As described in Section 3.1, non-parametric densities based on the temporal distribution of true-relevant documents are manually classified by two coders into four categories.  The weighted Cohen's $\kappa$ is calculated to assess agreement between the two coders.  Average Pearson's correlation ($\rho$) measures the correlation between these manual classifications and the per-topic ACF/DPS values.  
 
-\begin{table*}
-\small
-\center
+\begin{table}
+\centering
 \begin{tabular}{| l | l | l | l | } \hline
 \bf{Collection} & \bf{$\kappa$}  & \bf{$\rho_{ACF}$} & \bf{$\rho_{DPS}$} \\ \hline
 AP 	   & 0.743 & 0.518 & 0.356 \\ \hline
@@ -323,7 +315,10 @@ MB      & 0.806 & 0.692 & 0.354 \\ \hline
 \end{tabular}
 \caption{Cohen's $\kappa$ for inter-coder agreement for classification of true-relevant document distributions. Pearson's $\rho$ measuring correlation (average) between manual classifications and ACF/DPS values}
 \label{table.cor}
-\end{table*}
+\end{table}
+
+The results reported in Table \ref{table.cor} indicate moderate (0.40-0.60) to high (0.60-0.80) agreement between coders and higher correlation between the ACF and the manual classifications. These findings show that ACF and DPS do a good job representing the degree to which relevant documents are temporally constrained. 
+
 
 
 \section{Discussion and conclusions}
@@ -335,10 +330,27 @@ We were successful in modeling the ``event'' and ``opinion'' categories in the T
 While these results are promising, we were unable to identify characteristics that fully explain the manual classification decisions. If we cannot explain the process that determines the classifications, it raises questions about the value of these test collections for evaluation. Specifically, how can we be clear that the queries previously identified as ``temporally sensitive'' are truly so? This ambiguity also limits the utility of previous temporal IR research, since it is unclear how to select queries for which temporal models are well-suited.
 
 \begin{figure}
-\includegraphics[width=10cm]{images/301.png}
-\caption{Temporal distribution of relevant documents for topic 301 in TREC8} 
+\begin{subfigure}[t]{1in}
+\includegraphics[width=3cm]{analysis/301/301-trec8.pdf}
+\caption{All}
+\end{subfigure}
+\begin{subfigure}[t]{1in}
+\includegraphics[width=3cm]{analysis/301/301-la.pdf}
+\caption{LA Times}
+\end{subfigure}
+\begin{subfigure}[t]{1in}
+\includegraphics[width=3cm]{analysis/301/301-ft.pdf}
+\caption{FT}
+\end{subfigure}
+\begin{subfigure}[t]{1in}
+\includegraphics[width=3cm]{analysis/301/301-fbis.pdf}
+\caption{FBIS}
+\end{subfigure}
+\caption{Temporal distribution of relevant documents for topic 301 by sub-collection} 
 \label{fig.301}
 \end{figure}
+
+
 
 We propose a few principles to guide future work on the evaluation of temporal retrieval models.
 
