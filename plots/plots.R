@@ -6,7 +6,7 @@ ent <- read.csv("topic-groups-ent.dat", header=T)
 ggplot(ent, aes(factor(Topic), Pct, fill = Code)) + 
   geom_bar(stat="identity", position = "dodge") + 
   scale_fill_brewer(palette = "clarity") + 
-  labs(x="Collection", x="Percent", title="Entities") + 
+  labs(x="Topics", x="Percent", title="Entities") + 
   ylim(0, 0.6)
 dev.off()
 
@@ -15,7 +15,7 @@ evt <- read.csv("topic-groups-evt.dat", header=T)
 ggplot(evt, aes(factor(Topic), Pct, fill = Code)) + 
   geom_bar(stat="identity", position = "dodge") + 
   scale_fill_brewer(palette = "clarity") + 
-  labs(x="Collection", x="Percent", title="Events") +
+  labs(x="Topics", x="Percent", title="Events") +
   ylim(0, 0.6)
 dev.off()
 

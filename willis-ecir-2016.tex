@@ -51,16 +51,18 @@
 % the running heads and the author index.
 %
 
-\author{Craig Willis \and Garrick Sherman \and Miles Efron}
 
+%\author{Craig Willis \and Garrick Sherman \and Miles Efron}
+\author{[Blind]}
 \authorrunning{}
 % (feature abused for this document to repeat the title also on left hand pages)
 
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
-\institute{University of Illinois at Urbana-Champaign \\
-501 E. Daniel St., Champaign, IL 61820 \\
-\mails}
+%\institute{University of Illinois at Urbana-Champaign \\
+%501 E. Daniel St., Champaign, IL 61820 \\
+%\mails}
+\institute{[Blind]}
 
 %
 % NB: a more complex sample for affiliations and the mapping to the
@@ -89,11 +91,7 @@ In this paper, we take a deeper look into these manually classified topics to de
 
 To address our main question, we analyze  660 topics from the Text Retrieval Conference (TREC) previously used in the experimental evaluation of temporal retrieval models. We employ qualitative and quantitative methods to identify topic characteristics that might affect the manual assessment of ``temporal-sensitivity.'' The resulting coded topics are used in a set of regression analyses to assess the relationships between these characteristics and manually assigned categories.   This paper's main contribution is an in-depth, empirically based assessment of the complexities that underpin temporal IR.  This assessment helps us understand earlier temporal IR studies, while also suggesting novel ways to incorporate time effectively into retrieval.
 
-%This paper is structured as follows: Section 2 presents background information for this study. Section 3 describes the qualitative coding and analysis methods followed by the results in Section 4. Section 5 includes a discussion of the results and conclusions.
-
 \section{Background--Temporality and IR Test Collections}
-
-%This section presents background information about TREC topics and how they have been classified and used in the evaluation of temporal retrieval models.
 
 \subsection{TREC topics}
 
@@ -105,7 +103,7 @@ There are numerous notions of temporality in information retrieval research, eac
 
 \subsection{Time-sensitive queries}
 
-In this section, we review examples of studies focused on \emph{temporal relevance}.  The list of topics and collections used in each studies are listed in Table \ref{table.topics}. 
+In this section, we review examples of studies focused on \emph{temporal relevance}.  The list of topics and collections used in each of the studies are listed in Table \ref{table.topics}. 
 
 \begin{table*}
 \resizebox{\textwidth}{!}{%
@@ -133,7 +131,7 @@ Finally, Peetz, Meij, and de Rijke \cite{Peetz2013a} investigate the effect of t
 
 \subsection{What makes a query temporally sensitive?}
 
-Given the complex landscape described in the previous section, what in general makes a query temporally sensitive? Dakka et al \cite{Dakka2012} present a compelling definition. A query is ``time sensitive''  if  ``the relevant documents for the query are not spread uniformly over time, but rather tend to be concentrated at restricted intervals.''  In other words, a query is temporally sensitive if relevant documents are more likely to occur at some points in time than others. This is an essential point, since many temporal retrieval models rely on the temporal distribution of results in document scoring. However, the distribution of relevant documents alone is not sufficient to determine true temporality (non-uniformity of document distributions with respect to time can be due to many factors). To address this, most of the researcher listed above rely on common-sense notions of temporality based on the topic content considered independently of the distribution of relevant documents. Dakka et al refer to ``newsworthiness''; Efron and Golovchinksy to a ``bona fide temporal dimension''; and Jones and Diaz to ``events.''  A primary goal of the current study is to look deeper into these common-sense criteria with the aim of providing researchers a firmer basis for assessing which queries are likely to have a temporal relevance dimension.
+Given the complex landscape described in the previous section, what in general makes a query temporally sensitive? Dakka et al \cite{Dakka2012} present a compelling definition. A query is ``time sensitive''  if  ``the relevant documents for the query are not spread uniformly over time, but rather tend to be concentrated at restricted intervals.''  In other words, a query is temporally sensitive if relevant documents are more likely to occur at some points in time than others. This is an essential point, since many temporal retrieval models rely on the temporal distribution of results in document scoring. However, the distribution of relevant documents alone is not sufficient to determine true temporality (non-uniformity of document distributions with respect to time can be due to many factors). To address this, most of the studies listed above rely on common-sense notions of temporality based on the topic content considered independently of the distribution of relevant documents. Dakka et al refer to ``newsworthiness''; Efron and Golovchinksy to a ``bona fide temporal dimension''; and Jones and Diaz to ``events.''  A primary goal of the current study is to look deeper into these common-sense criteria with the aim of providing researchers a firmer basis for assessing which queries are likely to have a temporal relevance dimension.
 
 %In the next section we report the methods used in our analysis of  660 TREC topics used in temporal information retrieval research. 
 
@@ -146,7 +144,7 @@ We use content analysis \cite{Krippendorff1980} to identify characteristics of T
 
 
 
-Two of the authors participated in the development of the codebook and subsequent coding of topics. Codebook development began with a preliminary reading of all topic titles, descriptions and narratives. Codes were defined based on characteristics of topics expected to be related to temporal sensitivity, informed by the literature. Of the 660 topics, 330 were coded by both coders to allow for inter-rater consistency analysis. During this process, code definitions were refined and clarified. In the final coding, only topic title and description were used. The final codebook is presented in Table \ref{table.codebook}. Coding was completed using the Dedoose\footnote{http://www.dedoose.com} service.  
+Two of the authors participated in the development of the codebook and subsequent coding of topics. Codebook development began with a preliminary reading of all topic titles, descriptions and narratives. Codes were defined based on characteristics of topics expected to be related to temporal sensitivity, informed by the literature. Of the 660 topics, 330 were coded by both coders to allow for inter-rater consistency analysis. During this process, code definitions were refined and clarified. In the final coding, only topic title and description were used. The final codebook is presented in Table \ref{table.codebook}. Coding was completed using the Dedoose\footnote{http://www.dedoose.com} service.  After coding all 660 topics, the topic/code matrix was exported for subsequent reliability and regression analysis, as described in the following sections. 
 
 \begin{table}[!ht]
 \resizebox{\textwidth}{!}{%
@@ -172,7 +170,6 @@ An example of a coded topic from the 2004 Novelty test collection is presented i
 
 \begin{figure}[!ht]
 \begin{equation*}
-\small
 \begin{split}
 \mbox{\bf{Title}:} & \big[(\mbox{East Timor})_{PlaceEntity} \mbox{Independence}\big]_{SpecificEvent} \\
 \mbox{\bf{Description}:} & \big[  (\mbox{East Timor})_{PlaceEntity} \mbox{ vote for independence from } \\
@@ -183,11 +180,7 @@ An example of a coded topic from the 2004 Novelty test collection is presented i
 \label{fig.example}
 \end{figure}
 
-In addition to coding the topics based on the defined codes, the coders assigned a temporal designation to the distribution of relevant documents for each topic. Non-parametric densities were fit to the temporal distribution of relevant documents for topics with more than 20 relevant documents, following Dakka et al. Each coder reviewed the relevant document distribution along with the total number of relevant documents for each topic and assigned one of four values based on subjective impressions about the degreee to which relevant documents were temporally constrained:  too few observations (-1), low or no temporality (0), moderate temporality (1), and high temporality (2). %These designations are compared to the ACF and DPS values using Pearson's correlation to determine whether they are useful proxies for the relevant document distribution. %% ??? I *think* this sentence can be commented out.  But maybe I've mis-understood.
-
-% ??? I think the following sentence shouldn't be a new paragraph... just roll it into the previous para to save space.
-After coding all 660 topics, the topic/code matrix was exported for subsequent reliability and regression analysis, as described in the following sections. 
-
+In addition to coding the topics based on the defined codes, the coders assigned a temporal designation to the distribution of relevant documents for each topic. Non-parametric densities were fit to the temporal distribution of relevant documents for topics with more than 20 relevant documents, following Dakka et al. Each coder reviewed the relevant document distribution along with the total number of relevant documents for each topic and assigned one of four values based on subjective impressions about the degreee to which relevant documents were temporally constrained:  too few observations (-1), low or no temporality (0), moderate temporality (1), and high temporality (2). 
 \subsection{Reliability analysis}
 
 For this study, coder agreement is measured using Cohen's $\kappa$ for the classification of the distribution of relevant documents. For the broader qualitative coding task, we use a variation of percent overlap, since coding is performed on arbitrary segments of text. We define the \emph{percent overlap} as:
@@ -354,7 +347,6 @@ While these results are promising, we were unable to identify characteristics th
 \end{figure}
 
 
-
 We propose a few principles to guide future work on the evaluation of temporal retrieval models.
 
 Aside from the Novelty track topics, the other manual classifications consistently conflate two different concepts: the temporal distribution of judged-relevant documents and a common-sense notion of topic temporality. The temporal distribution of judged-relevant documents is an important indicator of possible temporality, particularly as models often rely on pseudo-relevant document distributions in scoring. However, these distributions alone are not adequate, which is why common-sense criteria have been introduced to determine whether topics have ``bona-fide temporal dimensions.'' We recommend considering these two concepts separately.  Since the first-order autocorrelation of the judged-relevant document distribution is highly correlated with manual judgements of temporality, we recommend using the ACF or other measure of distribution ``burstiness'' or ``peakedness'' instead of manual assessment.  
@@ -363,8 +355,10 @@ Common-sense notions of temporality should be clearly explicated.  We found that
 
 Sub-collections should be considered independently. Each sub-collection has different temporal dimensions (start/end dates), topical coverage, and document volumes. By combining sub-collections for temporal analysis, researchers risk falsely identifying temporally-sensitive queries. An example is given in Figure \ref{fig.301}, which breaks down the distribution of relevant documents by sub-collection in TREC8 for query 301 (international organized crime). This query was used as an exemplar of recency queries in Li and Croft. Looking at the distribution across all of TREC8, this does appear to be a recency query, since more relevant documents are found toward the end of the collection. However, broken down by sub-collection, we see that this is due to a high number of judged relevant documents in FBIS. Though the FT subcollection contains relevant documents during the same time frame as the FBIS spike, the peakedness of that subcollection is significantly less, suggesting considerable differences in the makeup of FT and FBIS. In fact, many of the recency queries in Li and Croft have large numbers of relevant documents in the FBIS sub-collection.    This leads us to recommend that individual sub-collections should be considered independently.
 
-However, using individual sub-collections is problematic for the LA Times and Financial Times sub-collections, which have surprisingly few judged-relevant documents. The LA Times has an average of 24 and Financial Times 33 judged-relevant documents.  Using Dakka et al's criterion of $>20$ judged-relevant documents per topic for the assessment of temporality, only 53 and 70 topics respectively would be available for analysis. This again suggests that the TREC8 sub-collections are not well-suited to temporal retrieval research.
-	
+However, using individual sub-collections is problematic for the LA Times and Financial Times sub-collections, which have surprisingly few judged-relevant documents. The LA Times has an average of 24 and Financial Times 33 judged-relevant documents per topic.  Using Dakka et al's criterion of $>20$ judged-relevant documents per topic for the assessment of temporality, only 53 and 70 topics respectively would be available for analysis. This again suggests that the TREC8 sub-collections are not well-suited for this type of temporal retrieval research.
+
+Through the in-depth analysis of test collections developed for temporal IR research, we have identified a number of complexities underlying the classification of temporally sensitive queries, suggesting new approaches to incorporating time into retrieval models. We also found that topics related to specific and periodic events are promising indicators of temporal sensitivity that have not yet been fully explored.  In future work, we intend to explore the role of events in temporal retrieval models. 
+
 \section{Acknowledgments}
 This work was supported in part by the US National Science Foundation under Grant No. [blind]. Any opinions, findings, conclusions, or recommendations expressed are those of the authors and do not necessarily reflect the views of the National Science Foundation. 
 
