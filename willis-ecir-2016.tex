@@ -82,11 +82,11 @@ This work takes an in-depth look at the factors that affect manual classificatio
 
 \section{Introduction}
 
-A basic intuition in temporal information retrieval research is that time should be modeled explicitly when scoring and ranking documents with respect to users' queries. Time-related criteria such as recency, currency, and freshness have long been recognized as factors in studies of relevance \cite{Barry1998}. Based on these criteria, researchers have explored a variety of temporal retrieval models that explicitly incorporate time into the document ranking \cite{Li2003,Efron2011,Dakka2012}. Researchers often refer to general classes of ``temporal queries'' or ``temporal information needs.''  Models have been proposed and evaluated for ``recency queries'' \cite{Li2003,Efron2011}, ``time-sensitive queries'' \cite{Dakka2012}, ``implicitly temporal queries'' \cite{Metzler2009}, and ``temporally biased queries'' \cite{Jones2007}.  For evaluation,  these studies rely on the manual classifications of topics into temporal categories.
+A basic intuition in temporal information retrieval research is that time should be modeled explicitly when scoring and ranking documents with respect to users' queries. Time-related criteria such as recency, currency, and freshness have long been recognized as factors in studies of relevance \cite{Barry1998}. Based on these criteria, researchers have explored a variety of temporal retrieval models that explicitly incorporate time into document ranking \cite{Li2003,Efron2011,Dakka2012}. Researchers often refer to general classes of ``temporal queries'' or ``temporal information needs.''  Models have been proposed for ``recency queries'' \cite{Li2003,Efron2011}, ``time-sensitive queries'' \cite{Dakka2012}, ``implicitly temporal queries'' \cite{Metzler2009}, and ``temporally biased queries'' \cite{Jones2007}.  For evaluation,  these studies rely on the manual classifications of topics into temporal categories.
 
 In this paper, we take a deeper look into these manually classified topics to develop a clearer understanding of \emph{what makes a query temporally sensitive}?  Previous manual classifications combine the temporal distribution of judged-relevant documents with common-sense notions of topic temporality without a clear explanation of the criteria or processes used in classification. As such, using these manually classified topics for evaluation is of limited value, since the processes being modeled are unclear. 
 
-To address this question, we analyze  660 topics from the Text Retrieval Conference (TREC) previously used in the experimental evaluation of temporal retrieval models. We employ qualitative and quantitative techniques to identify characteristics of topics that might affect the manual assessment of ``temporal-sensitivity.'' The resulting coded topics are used in a set of regression analyses to determine the specific relationships between these characteristics and manually assigned categories. 
+To address this question, we analyze  660 topics from the Text Retrieval Conference (TREC) previously used in the experimental evaluation of temporal retrieval models. We employ qualitative and quantitative methods to identify topic characteristics that might affect the manual assessment of ``temporal-sensitivity.'' The resulting coded topics are used in a set of regression analyses to assess the relationships between these characteristics and manually assigned categories. 
 
 This paper is structured as follows: Section 2 presents background information for this study. Section 3 describes the qualitative coding and analysis methods followed by the results in Section 4. Section 5 includes a discussion of the results and conclusions.
 
@@ -96,7 +96,7 @@ This section presents background information about TREC topics and how they have
 
 \subsection{TREC topics}
 
-Test collections developed for TREC generally consist of a collection of documents, a set of topics and associated relevance judgments. Document collections may be from a single source (e.g., microblog) or composed of multiple sub-collections with distinct start and end dates (e.g., TREC8).  Although the methods of creation have changed over time, TREC topics are generally intended to mimic real users' information needs with respect to the underlying document collection. Topics are distributed in a set of structured text files and typically consist of a title and description.  Temporal information retrieval researchers generally use the topic title as a short query and the title/description for manual analysis and classification.
+Test collections developed for TREC generally consist of a collection of documents, a set of topics and associated relevance judgments. Document collections may be from a single source (e.g., microblog) or composed of multiple sub-collections with distinct start and end dates (e.g., TREC8).  Although the methods of creation have changed over time, TREC topics are generally intended to mimic real users' information needs with respect to the underlying document collection and typically consist of a title and description.  Temporal information retrieval researchers generally use the topic title as a short query and the title/description for manual analysis and classification.
 
 \subsection{Time and relevance}
 
@@ -126,7 +126,7 @@ Jones and Diaz \cite{Jones2007} study the temporal characteristics of queries wi
 
 Dakka, Gravano, and Ipeirotis  \cite{Dakka2012} investigate a broader class of queries which they refer to as ``time-sensitive.'' They hypothesize that there are queries for which more relevant documents are found at specific points in time, not just recently. They manually examine the title, description and narrative of each topic and identify queries associated with specific news events. Only topics with $>20$ judged-relevant documents are considered. If the topic information is insufficient to make a decision, they analyze the distribution of true-relevant documents. The resulting classification consists of 86 temporally sensitive queries. 
 
-Efron and Golovchinsky \cite{Efron2011} investigate additional models for recency queries.  Topics are classified as ``recency'' if at least 2/3 of the relevant documents occur after the median document time and the topic has a ``bona fide temporal dimension'' based on manual review. The specific criteria for manual review are not specified.  
+Efron and Golovchinsky \cite{Efron2011} investigate additional models for recency queries.  Topics are classified as ``recency'' if at least 2/3 of the relevant documents occur after the median document time and the topic has a ``bona fide temporal dimension'' based on manual review, the specific criteria for which are not specified.  
 
 Finally, Peetz, Meij, and de Rijke \cite{Peetz2013a} investigate the effect of temporal bursts in estimating query models. Building on the earlier studies, they evaluate their models using the above test collections as well as a new collection based on TREC Blog06. As in the previous studies, the authors construct a subset of ``temporal'' queries through manual evaluation of topic descriptions and relevant document distributions. No specific criteria for classification are given.
 
@@ -147,7 +147,7 @@ We use content analysis \cite{Krippendorff1980} to identify characteristics of T
 
 Two of the authors participated in the development of the codebook and subsequent coding of topics. Codebook development began with a preliminary reading of all topic titles, descriptions and narratives. Codes were defined based on characteristics of topics expected to be related to temporal sensitivity, informed by the literature. Of the 660 topics, 330 were coded by both coders. During this process, code definitions were refined and clarified. In the final coding, only topic title and description were used. The final codebook is presented in Table \ref{table.codebook} in the appendix. Coding was completed using the Dedoose\footnote{http://www.dedoose.com} service.  
 
-\begin{table}
+\begin{table}[!ht]
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{| p{3cm} | p{6cm}  | p{6cm} |} \hline
 \bf{Code} & \bf{Description} & \bf{Examples}  \\ \hline
@@ -221,7 +221,7 @@ A primary goal of this study is to determine the characteristics that contribute
 
 \section{Results}
 
-In this section we report the results of our analysis including a summary of the qualitative codes and their distributions, coder agreement/reliability, and regression models. We also report the results of the comparison of the manual assessment of the distribution of relevant documents as compared to the ACF and DPS values.
+In this section we report the results of our analysis including a summary of the qualitative codes and their distributions, coder agreement/reliability, and regression models. We also report the results of the comparison between the manual assessment of the relevant document distributions and the ACF and DPS values.
 
 \subsection{Codes}
 
@@ -230,9 +230,9 @@ Our qualitative analysis suggests three broad classes: events, named entities, a
 
 \subsection{Code distributions}
 
-Figure \ref{fig.codedist} summarizes the percent of topics in each test collection with each code assigned. From these results, we can see that the Novelty and Microblog  collections have a higher percentage of specific events than the Blog and ad-hoc collections. The ad-hoc collections have a higher number of generic events, which supports the findings of Jones and Diaz \cite{Jones2007}. The Blog, Novelty, and Microblog test collections each have larger numbers of named entities in the topic titles and descriptions.
+Figure \ref{fig.codedist} summarizes the percent of topics in each test collection with each code assigned. We can see that the Novelty and Microblog  collections have a higher percentage of specific events than the Blog and ad-hoc collections. The ad-hoc collections have a higher number of generic events, which supports the findings of Jones and Diaz \cite{Jones2007}. The Blog, Novelty, and Microblog test collections each have larger numbers of named entities in the topic titles and descriptions.
 
-\begin{figure}
+\begin{figure}[!ht]
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
@@ -244,7 +244,7 @@ Figure \ref{fig.codedist} summarizes the percent of topics in each test collecti
 \end{subfigure}
 \begin{subfigure}{\textwidth}
 \includegraphics[width=11cm]{plots/coder-agreement.pdf}
-\end{subfigure}x
+\end{subfigure}
 \caption{Percent of topics in each collection with codes assigned from the (a) entity code group and (b) events code group; (c) percent agreement by code.}
 \label{fig.codedist}
 \end{figure}
@@ -294,7 +294,7 @@ Peetz (Rel) 		& $-1.245 + 1.218 \cdot SpecEvt + 0.797 \cdot Period + 2.835 \cdot
 
 For the 2003-2004 Novelty collection, the response variable is the manually assigned ``opinion'' (0) or ``event'' (1) categories.  Following Jones and Diaz \cite{Jones2007}, we adopt ``event'' as the temporal category. Logistic regression analysis is performed with and without the ACF and DPS predictors.  SpecificEvent and OtherEntity are significant predictors of the ``event'' category ($p < 0.01$), with a pseudo-$R^2$ of 0.669. Including the ACF of the true-relevant distribution is significant, with a minor improvement in model fit. The high pseudo-$R^2$ is unsurprising in this case, since the SpecificEvent code corresponds to the Novelty ``event'' category. It does, however, confirm our code definition.
 
-Dakka et al manually classified ``time-sensitive queries'' for TREC topics 301-450. As reported in Table \ref{table.regresults}, only the PlaceEntity code is a significant predictor of the manual classification. However, the pseudo-$R^2$ is very low (0.019).  Dakka et al acknowledge examining the relevant document distributions for the Los Angeles Times and Financial Times sub collections.  Including the DPS of the true-relevant document distribution increases the pseudo-$R^2$ to 0.263, suggesting that the relevant document distribution played a significant role in the manual classification.
+Dakka et al manually classified ``time-sensitive queries'' for TREC topics 301-450. As reported in Table \ref{table.regresults}, only the PlaceEntity code is a significant predictor of the manual classification. However, the pseudo-$R^2$ is very low (0.019).  Dakka et al acknowledge examining the relevant document distributions for the LA Times and Financial Times sub collections.  Including the DPS of the true-relevant document distribution increases the pseudo-$R^2$ to 0.263, suggesting that the relevant document distribution played a significant role in the manual classification.
 
 Efron and Golovchinsky also classified topics 301-450, in this case focusing on the identification of ``recency'' queries. As reported in Table \ref{table.regresults}, both PlaceEntity and OtherEntity are useful predictors of the temporal response. As with Dakka, including the DPS of the true-relevant distribution increases pseudo-$R^2$ from 0.181 to 0.377. This again suggests that the distribution of relevant documents played an important role in the determination of topic temporality.
 
@@ -325,7 +325,7 @@ The results reported in Table \ref{table.cor} indicate moderate (0.40-0.60) to h
 
 In this study, we have tried to identify potential factors or characteristics of TREC topics that can be used to predict manual classifications of ``temporal sensitivity.'' Other researchers have classified topics without clear definitions or criteria. We have attempted to model these classifications by proposing features believed to indicate temporality.  Features include the presence of different types of named entities, classes of events, and measures of the temporal distribution of judged relevant documents.
 
-We were successful in modeling the ``event'' and ``opinion'' categories in the TREC Novelty track, based primarily on the presence of our ``SpecificEvent'' code in the analyzed topics.  Event codes were also found to be useful predictors of the classification of Peetz et al. In all cases, the distribution of relevant documents, represented by ACF or DPS, was consistently a significant predictor of topic temporality. 
+We were successful in modeling the ``event'' and ``opinion'' categories in the Novelty track, based primarily on our ``SpecificEvent'' code in the analyzed topics.  Event codes were also found to be useful predictors of the classification of Peetz et al. In all cases, the distribution of relevant documents, represented by ACF or DPS, was consistently a significant predictor of topic temporality. 
 
 While these results are promising, we were unable to identify characteristics that fully explain the manual classification decisions. If we cannot explain the process that determines the classifications, it raises questions about the value of these test collections for evaluation. Specifically, how can we be clear that the queries previously identified as ``temporally sensitive'' are truly so? This ambiguity also limits the utility of previous temporal IR research, since it is unclear how to select queries for which temporal models are well-suited.
 
