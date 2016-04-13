@@ -1,78 +1,26 @@
-
-%%%%%%%%%%%%%%%%%%%%%%% file typeinst.tex %%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% This is the LaTeX source for the instructions to authors using
-% the LaTeX document class 'llncs.cls' for contributions to
-% the Lecture Notes in Computer Sciences series.
-% http://www.springer.com/lncs       Springer Heidelberg 2006/05/04
-%
-% It may be used as a template for your own input - copy it
-% to a new file with a new name and use it as the basis
-% for your article.
-%
-% NB: the document class 'llncs' has its own and detailed documentation, see
-% ftp://ftp.springer.de/data/pubftp/pub/tex/latex/llncs/latex2e/llncsdoc.pdf
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\documentclass[runningheads,a4paper]{llncs}
-
-\usepackage{amssymb}
-\usepackage{amsmath}
-\setcounter{tocdepth}{3}
-\usepackage{graphicx}
+\documentclass{sig-alternate}
 \usepackage{verbatim}
+\usepackage{array}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
 \captionsetup{compatibility=false}
-
-\usepackage{url}
-\urldef{\mails}\path|{willis8, gsherma2, mefron}@illinois.edu|
-\newcommand{\keywords}[1]{\par\addvspace\baselineskip
-\noindent\keywordname\enspace\ignorespaces#1}
 
 \DeclareMathOperator*{\argmin}{arg\,min}
 
+
 \begin{document}
 
-\mainmatter  % start of an individual contribution
+\author{}
+%\author{Craig Willis \and Garrick Sherman \and Miles Efron}
 
-% first the title is needed
+\CopyrightYear{2016} 
+\conferenceinfo{ASIST '16,}{October 14 - 18, 2016, Copenhagen, Denmark}
+
 \title{What makes a query temporally sensitive?}
 
-% a short form should be given in case it is too long for the running head
-\titlerunning{What makes a query temporally sensitive?}
-
-% the name(s) of the author(s) follow(s) next
-%
-% NB: Chinese authors should write their first names(s) in front of
-% their surnames. This ensures that the names appear correctly in
-% the running heads and the author index.
-%
-
-
-%\author{Craig Willis \and Garrick Sherman \and Miles Efron}
-\author{[Blind]}
-\authorrunning{}
-% (feature abused for this document to repeat the title also on left hand pages)
-
-% the affiliations are given next; don't give your e-mail address
-% unless you accept that it will be published
-%\institute{University of Illinois at Urbana-Champaign \\
-%501 E. Daniel St., Champaign, IL 61820 \\
-%\mails}
-\institute{[Blind]}
-
-%
-% NB: a more complex sample for affiliations and the mapping to the
-% corresponding authors can be found in the file "llncs.dem"
-% (search for the string "\mainmatter" where a contribution starts).
-% "llncs.dem" accompanies the document class "llncs.cls".
-%
-
-\toctitle{Lecture Notes in Computer Science}
-\tocauthor{Authors' Instructions}
 \maketitle
 
 
@@ -87,7 +35,7 @@ This work takes an in-depth look at the factors that affect manual classificatio
 
 A growing body of information retrieval research argues that temporality should be modeled explicitly when scoring and ranking documents with respect to users' queries. Time-related criteria such as recency, currency, and freshness have long been recognized as factors in studies of relevance \cite{Barry1998}. Based on these criteria, researchers have explored a variety of temporal retrieval models that explicitly incorporate time into document ranking \cite{Li2003,Efron2011,Dakka2012}. Researchers often refer to general classes of ``temporal queries'' or ``temporal information needs.''  Models have been proposed for ``recency queries'' \cite{Li2003,Efron2011}, ``time-sensitive queries'' \cite{Dakka2012}, ``implicitly temporal queries'' \cite{Metzler2009}, and ``temporally biased queries'' \cite{Jones2007}.  For evaluation,  these studies rely on manual classifications of topics into temporal categories.
 
-In this paper, we take a deeper look into these manually classified topics to develop a clear understanding of \emph{what makes a query temporally sensitive}?  Previous manual classifications combine the temporal distribution of judged-relevant documents with common-sense notions of topic temporality without a clear explanation of the criteria or processes used in classification. Since the processes being modeled are unclear, using these manually classified topics for evaluation is of limited value. 
+In this paper, we take a deeper look into these manually classified topics to develop a clearer understanding of \emph{what makes a query temporally sensitive}?  Previous manual classifications combine the temporal distribution of judged-relevant documents with common-sense notions of topic temporality without a clear explanation of the criteria or processes used in classification. Since the processes being modeled are unclear, using these manually classified topics for evaluation is of limited value. 
 
 To address our main question, we analyze  660 topics from the Text Retrieval Conference (TREC) previously used in the experimental evaluation of temporal retrieval models. We employ qualitative and quantitative methods to identify topic characteristics that might affect the manual assessment of ``temporal-sensitivity.'' The resulting coded topics are used in a set of regression analyses to assess the relationships between these characteristics and manually assigned categories.   This paper's main contribution is an in-depth, empirically based assessment of the complexities that underpin temporal IR.  This assessment helps us understand earlier temporal IR studies, while also suggesting novel ways to incorporate time effectively into retrieval.
 
@@ -146,7 +94,8 @@ We use content analysis \cite{Krippendorff1980} to identify characteristics of T
 
 Two of the authors participated in the development of the codebook and subsequent coding of topics. Codebook development began with a preliminary reading of all topic titles, descriptions and narratives. Codes were defined based on characteristics of topics expected to be related to temporal sensitivity, informed by the literature. Of the 660 topics, 330 were coded by both coders to allow for inter-rater consistency analysis. During this process, code definitions were refined and clarified. In the final coding, only topic title and description were used. The final codebook is presented in Table \ref{table.codebook}. Coding was completed using the Dedoose\footnote{http://www.dedoose.com} service.  After coding all 660 topics, the topic/code matrix was exported for subsequent reliability and regression analysis, as described in the following sections. 
 
-\begin{table}[!ht]
+\begin{table*}[!ht]
+\small
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{| p{2cm} | p{9cm}  | p{4cm} |} \hline
 \bf{Code} & \bf{Description} & \bf{Examples}  \\ \hline
@@ -163,7 +112,7 @@ Explicit Date & Apply this code to identify explicit dates. & 1988; June 15, 199
 \end{tabular}}
 \caption{Codebook}
 \label{table.codebook}
-\end{table}
+\end{table*}
 
 
 An example of a coded topic from the 2004 Novelty test collection is presented in Figure \ref{fig.example}.  This topic refers to a specific event and contains place entities as well as an explicit date.  Topic N57 is categorized as an ``event'' by the TREC topic creator and is therefore an unambiguous temporal topic as defined by Jones and Diaz.
@@ -272,6 +221,7 @@ To assess coding reliability, a total of 1,244 codes were assigned to 330 topics
 In this section, we report the results of the logistic regression analysis, predicting the manually assigned categories for each test collection. The resulting models are reported in Table \ref{table.regresults}. 
 
 \begin{table*}
+\small
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{| l | l | l | l | l |} \hline
 \bf{Name} & \bf{Model}  & \bf{$R^2$} \\ \hline
