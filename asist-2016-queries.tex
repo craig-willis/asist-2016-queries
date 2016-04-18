@@ -1,14 +1,22 @@
-\documentclass{sig-alternate}
+\documentclass{asist}
 \usepackage{verbatim}
 \usepackage{array}
-\usepackage{caption}
+\usepackage[font={small,sf,bf}]{caption}
 \usepackage{subcaption}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \captionsetup{compatibility=false}
+\usepackage{apacite}
 
 \DeclareMathOperator*{\argmin}{arg\,min}
+
+\setcounter{secnumdepth}{0}
+\pagenumbering{arabic}
+
+\makeatletter
+\renewcommand\normalsize{\@setfontsize\normalsize{10}{12}}
+\makeatother
 
 
 \begin{document}
@@ -118,7 +126,7 @@ These test collections are discussed here, but not included in the analysis pres
 
 \section{Methods}
 
-In the studies reviewed in Section 2.3, researchers rely in part on existing TREC test collections to evaluate proposed temporal retrieval models. In each study, topics are manually categorized (e.g.,  temporal or non-temporal) to assess model performance. This study further investigates the characteristics of topics deemed temporal. To achieve this, we use a combination of qualitative content analysis and regression analysis, as described below.
+In the studies reviewed in the Section ``Time-sensitivequeries'', researchers rely in part on existing TREC test collections to evaluate proposed temporal retrieval models. In each study, topics are manually categorized (e.g.,  temporal or non-temporal) to assess model performance. This study further investigates the characteristics of topics deemed temporal. To achieve this, we use a combination of qualitative content analysis and regression analysis, as described below.
 
 \subsection{Qualitative coding}
 We use content analysis \cite{Krippendorff1980} to identify characteristics of TREC topics potentially associated with temporal sensitivity. 660 topics were selected from the TREC Ad-hoc, Novelty, Blog, and Microblog tracks. These topics have previously been used by researchers to evaluate temporal retrieval models. They have associated, published manual classifications or are from collections with known temporal characteristics (i.e., Microblog). The complete set of topics used in this study are listed in Table \ref{table.topics} along with the temporal constraints of each collection or sub-collection.
@@ -178,7 +186,7 @@ Where $m$ is the number of excerpts assigned the same code by both coders, $u_1$
 
 \subsection{Relevant document distributions}
 
-In each of the four prior studies enumerated in Section 2.3, the original authors acknowledge using the distribution of judged-relevant or pseudo-relevant documents in determining topic temporality. For this study, we use two different measures to represent these distributions: the first-order time series autocorrelation (ACF) and the dominant power spectrum (DPS).
+In each of the four prior studies enumerated in Section ``Time-sensitive queries'', the original authors acknowledge using the distribution of judged-relevant or pseudo-relevant documents in determining topic temporality. For this study, we use two different measures to represent these distributions: the first-order time series autocorrelation (ACF) and the dominant power spectrum (DPS).
 
 Jones and Diaz \cite{Jones2007} use the ACF created by the temporal distribution of pseudo-relevant documents for a query as a predictor of query temporality. They note that queries with strong inter-day dependencies will have high ACF values, indicating predictability in the time series. The first-order autocorrelation of the time series $X$ is defined by Equation \ref{eq.acf}:
 
@@ -287,7 +295,7 @@ Finally, we look at Peetz et al's \cite{Peetz2013a} classification of the Blog06
 
 \subsection{Relevant document distributions}
 
-As described in Section 3.1, non-parametric densities based on the temporal distribution of true-relevant documents are manually classified by two coders into four categories.  The weighted Cohen's $\kappa$ is calculated to assess agreement between the two coders.  Average Pearson's correlation ($\rho$) measures the correlation between these manual classifications and the per-topic ACF/DPS values.  
+As described in the ``Methods'' section, non-parametric densities based on the temporal distribution of true-relevant documents are manually classified by two coders into four categories.  The weighted Cohen's $\kappa$ is calculated to assess agreement between the two coders.  Average Pearson's correlation ($\rho$) measures the correlation between these manual classifications and the per-topic ACF/DPS values.  
 
 \begin{table}
 \centering
@@ -357,7 +365,8 @@ In future work, we intend to expand this study to consider additional test colle
 \section{Acknowledgments}
 This work was supported in part by the US National Science Foundation under Grant No. [blind]. Any opinions, findings, conclusions, or recommendations expressed are those of the authors and do not necessarily reflect the views of the National Science Foundation. 
 
-\bibliographystyle{abbrv}
+%\bibliographystyle{abbrv}
+\bibliographystyle{apacite}
 \bibliography{temporalir}  
 
 \end{document}
