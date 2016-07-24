@@ -21,8 +21,12 @@
 
 \begin{document}
 
-\author{}
-%\author{Craig Willis \and Garrick Sherman \and Miles Efron}
+\author{
+Craig Willis, Garrick Sherman, and Miles Efron\\
+     \affaddr{School of Information Sciences}\\
+       \affaddr{University of Illinois at Urbana-Champaign}\\
+       \email{\{willis8, gsherma2, mefron\}@illinois.edu}
+}
 
 \CopyrightYear{2016} 
 \conferenceinfo{ASIST '16,}{October 14 - 18, 2016, Copenhagen, Denmark}
@@ -34,7 +38,7 @@
 
 \begin{abstract}
 
-This work examines factors that affect manual classifications of ``temporally sensitive'' information needs.  We introduce the concepts of \emph{temporal relevance} and \emph{temporal topicality} to differentiate between different aspects of temporal retrieval research. We use qualitative and quantitative techniques to analyze 660 topics from the Text Retrieval Conference (TREC) previously used in the experimental evaluation of temporal retrieval models.  Regression analysis is used to model previous manual classifications. We identify factors and potential problems with previous classifications, proposing principles and guidelines for future work on the evaluation of temporal retrieval models. 
+This work examines factors that affect manual classifications of ``temporally sensitive'' information needs.  We introduce the concepts of \emph{temporal relevance} and \emph{temporal topicality} to differentiate between different aspects of temporal retrieval research. We use qualitative and quantitative techniques to analyze 660 topics from the Text Retrieval Conference (TREC) previously used in the experimental evaluation of temporal retrieval models.  We use regression analysis to model previous manual classifications. We identify factors and potential problems with previous classifications, proposing principles and guidelines for future work on the evaluation of temporal retrieval models. 
 
 \end{abstract}
 
@@ -99,7 +103,7 @@ Given the complex landscape described in the previous section, what in general m
 
 \subsection{Other related test collections}
 
-This study is concerned with the analysis of manually classified queries as they relate to the concept of \emph{temporal relevance}. This study is also limited to queries used in ad-hoc retrieval and does not address those used in filtering tasks such as the recent Knowledge Base Acceleration (KBA) \cite{Frank2013} and Temporal Summarization \cite{Guo2013} tracks.  While certainly pertinent to the investigation of query temporality, the topics and test collections used in these tracks are concerned with long standing and prospective information needs and are therefore fundamentally different from those used in ad-hoc studies. 
+Our study is concerned with the analysis of manually classified queries as they relate to the concept of \emph{temporal relevance}. We analyze queries used in ad-hoc retrieval and do not address those used in filtering tasks such as the recent Knowledge Base Acceleration (KBA) \cite{Frank2013} and Temporal Summarization \cite{Guo2013} tracks.  While certainly pertinent to the investigation of query temporality, the topics and test collections used in these tracks are concerned with long standing and prospective information needs and are therefore fundamentally different from those used in ad-hoc studies. 
 
 In the case of KBA, topics are represented as named-entities in a knowledge base (e.g., Wikipedia). The task is to recommend edits to the knowledge base entity from a timestamped stream of documents.  Little information is given about why the entities were selected, although we can assume from the task that some entities were selected because new information is received about them over the timeframe of the corpus. 
 
@@ -108,7 +112,7 @@ Similarly, the Temporal Summarization track is concerned with ``online updating 
 We also do not include the topics developed for the NTCIR Temporalia test collection \cite{Joho2014} because they diverge from our definition of \emph{temporal relevance}.  Both the Temporal Query Intent Classification (TQIC) and Temporal Information Retrieval (TIR) test collections contain queries explicitly classified into four categories: past, recency, future, and atemporal. On the surface, these categories seem to relate to those discussed above. However, further inspection reveals that the queries in these test collections are primarily concerned with \emph{temporal topicality}.  
 We'll use an example to illustrate the distinction between \emph{temporal topicality} and \emph{temporal relevance} in the Temporalia collection. 
 
-The authors provide the example topic about the film ``Girl with the Dragon Tattoo'' in the context of four temporally-categorized questions:
+Joho, Jawowt, and Blanco provide the example topic about the film ``Girl with the Dragon Tattoo'' in the context of four temporally-categorized questions:
 
 \begin{itemize}
 \item Past: How did the casting of the film develop?
@@ -363,7 +367,7 @@ Through the in-depth analysis of test collections developed for temporal IR rese
 In future work, we intend to expand this study to consider additional test collections, including those for the more recent filtering tracks \cite{Frank2013, Guo2013}. We also plan to further explore the role of ``events'' in temporal retrieval models.
 
 \section{Acknowledgments}
-This work was supported in part by the US National Science Foundation under Grant No. [blind]. Any opinions, findings, conclusions, or recommendations expressed are those of the authors and do not necessarily reflect the views of the National Science Foundation. 
+This work was supported in part by the US National Science Foundation under Grant No. 1217279. Preliminary results were reported in an earlier conference poster \cite{Willis2016}. Any opinions, findings, conclusions, or recommendations expressed are those of the authors and do not necessarily reflect the views of the National Science Foundation. 
 
 %\bibliographystyle{abbrv}
 \bibliographystyle{apacite}
